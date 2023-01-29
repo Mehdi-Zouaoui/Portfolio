@@ -1,0 +1,18 @@
+.container {
+  width: 100vw;
+
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sliderItem {
+  width: 10vw;
+  height: 40vh;
+  background-position: center;
+  background-size: 75vh;
+  margin: 1vw;
+  border-radius: 3vw;
+  display: inline-block;
+  cursor: pointer;
+    background: red;
+}
