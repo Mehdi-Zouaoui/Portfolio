@@ -1,18 +1,25 @@
 .container {
   width: 100vw;
-
+  display: flex;
   text-align: center;
   white-space: nowrap;
+  justify-content: center;
   overflow: hidden;
 }
 .sliderItem {
-  width: 10vw;
+  width: 15vw;
   height: 40vh;
-  background-position: center;
-  background-size: 75vh;
+  background-size: cover;
   margin: 1vw;
-  border-radius: 3vw;
-  display: inline-block;
+  color: white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-    background: red;
+}
+.sliderItem_img {
+  width: 150px;
+  height: 150px;
 }

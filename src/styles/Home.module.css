@@ -97,7 +97,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -125,7 +125,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
@@ -275,4 +275,46 @@
   to {
     transform: rotate(0deg);
   }
+}
+.profil_picture {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+}
+
+.about_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.details_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.personal_container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.social_list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 45%;
+}
+.social_li {
+  background-color: #2a2626;
+  width: 20%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #f5cb5c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social_item {
+  width: 50px;
+  height: 100px;
 }
