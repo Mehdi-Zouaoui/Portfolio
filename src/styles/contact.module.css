@@ -1,0 +1,15 @@
+.contact {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+}
+.contact_left_container {
+  width: 40%;
+  background: #000;
+  height: 100%;
+}
+.contact_right_container {
+  width: 60%;
+  background: blue;
+  height: 100%;
+}

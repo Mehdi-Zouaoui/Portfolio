@@ -1,0 +1,45 @@
+.experience_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.job_list {
+  width: 60%;
+}
+.job_list_item {
+  background: #f5cb5c;
+  color: #2a2626;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+}
+.job_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.job_content {
+  display: flex;
+  flex-direction: column;
+}
+.job_location {
+  display: flex;
+}
+.job_badges_list {
+  display: flex;
+  list-style: none;
+}
+.job_badge {
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 10px;
+}

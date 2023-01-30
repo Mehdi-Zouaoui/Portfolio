@@ -92,7 +92,7 @@ const Slider = () => {
           {item.title}
 
           <div>{item.clicked ? item.content : null}</div>
-          <img src={item.img} className={styles.sliderItem_img} alt="" />
+          {/* <img src={item.img} className={styles.sliderItem_img} alt="" /> */}
         </div>
       ))}
     </div>

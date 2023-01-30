@@ -4,7 +4,8 @@
   justify-content: space-around;
   align-items: center;
   height: 30vh;
-  background: blue;
+  background: #2a2626;
+  color: #f5cb5c;
   width: 10vw;
   border-radius: 100px;
 }
