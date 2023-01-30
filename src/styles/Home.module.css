@@ -1,7 +1,4 @@
-body {
-  font-family: "Archivo", sans-serif;
-  font-family: "Poppins", sans-serif;
-}
+
 .main {
   display: flex;
   flex-direction: column;
