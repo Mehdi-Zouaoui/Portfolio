@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 6rem;
   min-height: 100vh;
 }
@@ -284,27 +285,25 @@
 }
 .profil {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 50%;
 }
 .catchphrase {
-  width: 50%;
+  width: 100%;
 }
 .presentation {
-  font-size: 20px;
+  font-size: 50px;
 }
 .presentation_name {
   color: #f5cb5c;
-  font-size: 25px;
 }
 .presentation_profession {
-  font-size: 15px;
+  font-size: 25px;
 }
 .profil_picture {
   border-radius: 50%;
-  height: 200px;
-  width: 200px;
+
   border: 2px solid #2a2626;
 }
 
@@ -314,25 +313,60 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+.about_title {
+  margin-bottom: 10px;
+}
+.about_text {
+  margin-bottom: 10px;
+}
+.hobbies_container {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .details_container {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
 }
 .details_content {
   width: 50%;
 }
+
 .personal_container {
   display: flex;
   flex-direction: column;
   width: 45%;
 }
+.technologies_container {
+}
+.technologies_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  list-style: none;
+}
+.technologies_list li {
+  width: 24%;
+  margin-top: 10px;
+}
+.technologies_index {
+  color: #f5cb5c;
+  margin-right: 3px;
+}
 .social_list {
   display: flex;
   flex-wrap: wrap;
-  width: 45%;
+
+  width: 100%;
 }
 .social_li {
   background-color: #2a2626;
@@ -351,8 +385,20 @@
 }
 .cv_button {
   background-color: #2a2626;
-  color: #f5cb5c;
+  color: white;
   padding: 20px;
   border-radius: 10px;
+  margin-top: 50px;
   cursor: pointer;
+  box-shadow: 0 0 0 0 black;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.01);
+  }
+}
+.projects_title {
+  text-align: center;
+  margin: 20px 0;
 }

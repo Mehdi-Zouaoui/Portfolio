@@ -1,42 +1,57 @@
 import styles from "@/styles/slider.module.css";
+import {
+  faCode,
+  faDumbbell,
+  faGamepad,
+  faLaptop,
+  faMugHot,
+  faPersonSwimming,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import gsap from "gsap";
 import { createRef, useLayoutEffect, useRef, useState } from "react";
-
 const Slider = () => {
   const comp = useRef();
 
   const [items, setItems] = useState([
     {
       title: "Twools",
-      content: "Text",
+      content: "Projet entreprenarial",
       clicked: false,
       img: "LOGO_TWOOLS.png",
       background: "twoolsBg.PNG",
     },
     {
-      title: "Twools",
-      content: "Text",
+      title: "Generateur de message",
+      content: "Developpement Full Stack React et Express",
       clicked: false,
       img: "LOGO_TWOOLS.png",
       background: "twoolsBg.PNG",
     },
     {
-      title: "Twools",
-      content: "Text",
+      title: "Bibliothèque Cinema",
+      content: "Developpement Front avec React",
       clicked: false,
       img: "LOGO_TWOOLS.png",
       background: "twoolsBg.PNG",
     },
     {
-      title: "Twools",
-      content: "Text",
+      title: "Documentation personnel",
+      content: "Developpement Angular",
       clicked: false,
       img: "LOGO_TWOOLS.png",
       background: "twoolsBg.PNG",
     },
     {
-      title: "Twools",
-      content: "Text",
+      title: "Site promotionel",
+      content: "Developpement Javascript et gestion des données avec Firebase ",
+      clicked: false,
+      img: "LOGO_TWOOLS.png",
+      background: "twoolsBg.PNG",
+    },
+    {
+      title: "Site E-commerce",
+      content: "Developpement Front avec React ",
       clicked: false,
       img: "LOGO_TWOOLS.png",
       background: "twoolsBg.PNG",
@@ -84,14 +99,22 @@ const Slider = () => {
             backgroundImage: `  linear-gradient(
             rgba(0, 0, 0, 0.7), 
             rgba(0, 0, 0, 0.7)
-          ), url(${item.background})`,
+          )`,
           }}
           onClick={() => elasticAnimation(item, index)}
           key={index}
         >
-          {item.title}
+          <h2 className={styles.item_title}>{item.title}</h2>
+          {item.clicked ? (
+            <div className={styles.item_content_container}>
+              <p className={styles.item_content}>{item.content}</p>
+              <div className={styles.item_learn_more}>Learn More</div>
+            </div>
+          ) : (
+            ""
+          )}
 
-          <div>{item.clicked ? item.content : null}</div>
+          <FontAwesomeIcon icon={faLaptop} />
           {/* <img src={item.img} className={styles.sliderItem_img} alt="" /> */}
         </div>
       ))}

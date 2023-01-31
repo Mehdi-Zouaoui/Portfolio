@@ -1,9 +1,12 @@
 .nav_container {
   display: flex;
-  width: 85%;
-  margin: auto;
+  width: 100%;
+  margin: 30px auto;
   justify-content: space-between;
   font-family: "Unbounded", cursive;
+}
+.nav_name {
+  font-size: 35px;
 }
 .nav_img_container {
   display: flex;
@@ -17,8 +20,9 @@
 }
 .nav_list_container {
   display: flex;
-  width: 40%;
+  width: 60%;
   list-style: none;
   justify-content: space-around;
   align-items: center;
+  font-size: 25px;
 }

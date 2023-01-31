@@ -10,7 +10,7 @@ const Model3d = () => {
       <Canvas
         style={{ background: "transparent", height: "50vh", width: "70vh" }}
         shadows
-        camera={{ position: [0, 1, 1], fov: 50 }}
+        camera={{ position: [-1, 1, 0], fov: 15 }}
       >
         <Suspense fallback={null}>
           <Model />

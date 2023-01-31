@@ -4,16 +4,18 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  margin: 30px 0;
 }
 .job_list {
   width: 60%;
 }
 .job_list_item {
   background: #f5cb5c;
-  color: #2a2626;
+  color: black;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  height: 3vh;
   margin-bottom: 15px;
   padding: 5px 15px;
 }
@@ -25,13 +27,22 @@
 .job_content {
   display: flex;
   flex-direction: column;
+  height: 90%;
+  justify-content: space-around;
 }
+
 .job_location {
   display: flex;
+  margin-bottom: 10px;
+}
+.job_text {
+  white-space: pre-line;
+  line-height: 25px;
 }
 .job_badges_list {
   display: flex;
   list-style: none;
+  margin: 10px 0;
 }
 .job_badge {
   background: #000;
@@ -42,4 +53,5 @@
   border-radius: 12px;
   padding: 10px;
   font-size: 10px;
+  margin-right: 5px;
 }

@@ -1,23 +1,51 @@
 .container {
-  width: 100vw;
+  width: 100%;
   display: flex;
-  text-align: center;
+
   white-space: nowrap;
   justify-content: center;
   overflow: hidden;
 }
+.item_title {
+  white-space: pre-line;
+  width: 90%;
+  text-align: center;
+}
 .sliderItem {
   width: 15vw;
   height: 40vh;
-  background-size: cover;
-  margin: 1vw;
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: black;
+  margin-right: 1vw;
   color: white;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   cursor: pointer;
+}
+.item_content_container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.item_learn_more {
+  background: #f5cb5c;
+  color: #2a2626;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.item_content {
+  width: 50%;
+
+  text-align: center;
+  white-space: pre-line;
 }
 .sliderItem_img {
   width: 150px;
