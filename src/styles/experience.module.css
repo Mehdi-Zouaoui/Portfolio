@@ -4,10 +4,15 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  
   margin: 30px 0;
+}
+.experience_title {
+  margin: 20px;
 }
 .job_list {
   width: 60%;
+  height:500px;
 }
 .job_list_item {
   background: #f5cb5c;
@@ -15,7 +20,7 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 3vh;
+
   margin-bottom: 15px;
   padding: 5px 15px;
 }
@@ -25,10 +30,22 @@
   align-items: center;
 }
 .job_content {
+ 
+  max-height: 0;
+  overflow: hidden;
+
+  transition : all 1s cubic-bezier(0,1,0,1)
+
+}
+
+.job_content_show{
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 90%;
   justify-content: space-around;
+  height:300px;
+  max-height:500px;
+  transition : all 2s cubic-bezier(0,1,0,1)
 }
 
 .job_location {

@@ -47,7 +47,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <Model3d />
+          {/* <Model3d /> */}
         </div>
         {/* <SocialsBar /> */}
         <div className={styles.about_container}>
@@ -167,7 +167,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.hobbies_container}>
-              <h3>Hobbies</h3>
+              <h3 className={styles.hobbies_title}>Hobbies</h3>
               <ul className={styles.social_list}>
                 <li className={styles.social_li}>
                   {" "}

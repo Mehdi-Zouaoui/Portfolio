@@ -282,6 +282,7 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  margin : 50px;
 }
 .profil {
   display: flex;
@@ -317,18 +318,21 @@
   margin-bottom: 30px;
 }
 .about_title {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .about_text {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .hobbies_container {
   width: 50%;
-
+  margin-left:30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+}
+.hobbies_title {
+  margin-bottom: 20px;
 }
 .details_container {
   display: flex;
@@ -365,7 +369,7 @@
 .social_list {
   display: flex;
   flex-wrap: wrap;
-
+  
   width: 100%;
 }
 .social_li {
@@ -400,5 +404,5 @@
 }
 .projects_title {
   text-align: center;
-  margin: 20px 0;
+  margin: 40px 0;
 }
