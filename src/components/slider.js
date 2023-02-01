@@ -9,6 +9,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import gsap from "gsap";
+import Link from "next/link";
+import Router from "next/router";
 import { createRef, useLayoutEffect, useRef, useState } from "react";
 const Slider = () => {
   const comp = useRef();
@@ -18,50 +20,46 @@ const Slider = () => {
       title: "Twools",
       content: "Projet entreprenarial",
       clicked: false,
-      img: "LOGO_TWOOLS.png",
-      background: "twoolsBg.PNG",
     },
     {
       title: "Generateur de message",
       content: "Developpement Full Stack React et Express",
       clicked: false,
-      img: "LOGO_TWOOLS.png",
-      background: "twoolsBg.PNG",
     },
     {
       title: "Bibliothèque Cinema",
       content: "Developpement Front avec React",
       clicked: false,
-      img: "LOGO_TWOOLS.png",
-      background: "twoolsBg.PNG",
     },
     {
       title: "Documentation personnel",
       content: "Developpement Angular",
       clicked: false,
-      img: "LOGO_TWOOLS.png",
-      background: "twoolsBg.PNG",
     },
     {
       title: "Site promotionel",
       content: "Developpement Javascript et gestion des données avec Firebase ",
       clicked: false,
-      img: "LOGO_TWOOLS.png",
-      background: "twoolsBg.PNG",
     },
     {
       title: "Site E-commerce",
       content: "Developpement Front avec React ",
       clicked: false,
-      img: "LOGO_TWOOLS.png",
-      background: "twoolsBg.PNG",
     },
   ]);
   useLayoutEffect(() => {
     console.log("rerun");
   }, [items]);
   const itemsRef = useRef([...Array(items.length)].map(() => createRef()));
-
+  const sendProps = (item) => {
+    Router.push({
+      pathname: `/projects/${item.title.toLowerCase()}`,
+      query: {
+        title: item.title,
+        content: item.content,
+      },
+    });
+  };
   const elasticAnimation = (item, i) => {
     const newItems = [...items];
     newItems.forEach((it, ind) => {
@@ -108,7 +106,15 @@ const Slider = () => {
           {item.clicked ? (
             <div className={styles.item_content_container}>
               <p className={styles.item_content}>{item.content}</p>
-              <div className={styles.item_learn_more}>Learn More</div>
+
+              <div
+                className={styles.item_learn_more}
+                onClick={() => {
+                  sendProps(item);
+                }}
+              >
+                Learn More
+              </div>
             </div>
           ) : (
             ""

@@ -12,9 +12,9 @@ import {
   faPersonSwimming,
 } from "@fortawesome/free-solid-svg-icons";
 import { Inter } from "@next/font/google";
-
 import Head from "next/head";
 import Image from "next/image";
+
 import React from "react";
 import Slider from "../components/slider";
 import SocialsBar from "../components/socialsBar";
@@ -47,7 +47,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          {/* <Model3d /> */}
+          <div className={styles.model}></div>
         </div>
         {/* <SocialsBar /> */}
         <div className={styles.about_container}>
@@ -205,7 +205,14 @@ export default function Home() {
                   />
                 </li>
               </ul>
-              <div className={styles.cv_button}>Download CV</div>
+
+              <a
+                href="/CV.pdf"
+                className={styles.cv_button}
+                download="Zouaoui Mehdi CV"
+              >
+                Download CV
+              </a>
             </div>
           </div>
         </div>
