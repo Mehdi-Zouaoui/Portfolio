@@ -11,10 +11,11 @@ import {
   faMugHot,
   faPersonSwimming,
 } from "@fortawesome/free-solid-svg-icons";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
 import { Inter } from "@next/font/google";
 import Head from "next/head";
 import Image from "next/image";
-
+import InfiniteLooper from "../components/looper";
 import React from "react";
 import Slider from "../components/slider";
 import SocialsBar from "../components/socialsBar";
@@ -66,104 +67,129 @@ export default function Home() {
               </p>
               <div className={styles.technologies_container}>
                 <h3>Technologies</h3>
-                <ul className={styles.technologies_list}>
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon
-                      className={styles.technologies_index}
-                      icon={faCaretRight}
-                    />
-                    Next js
-                  </li>
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon
-                      className={styles.technologies_index}
-                      icon={faCaretRight}
-                    />
-                    React
-                  </li>
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon
-                      className={styles.technologies_index}
-                      icon={faCaretRight}
-                    />
-                    REST API
-                  </li>
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon
-                      className={styles.technologies_index}
-                      icon={faCaretRight}
-                    />
-                    GraphQL API
-                  </li>
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon
-                      className={styles.technologies_index}
-                      icon={faCaretRight}
-                    />
-                    JSX/HTML
-                  </li>
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon
-                      className={styles.technologies_index}
-                      icon={faCaretRight}
-                    />
-                    CSS/SCSS
-                  </li>
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon
-                      className={styles.technologies_index}
-                      icon={faCaretRight}
-                    />
-                    Tailwind
-                  </li>
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon
-                      className={styles.technologies_index}
-                      icon={faCaretRight}
-                    />
-                    Node js
-                  </li>
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon
-                      className={styles.technologies_index}
-                      icon={faCaretRight}
-                    />
-                    Express
-                  </li>
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon
-                      className={styles.technologies_index}
-                      icon={faCaretRight}
-                    />
-                    MongoDB
-                  </li>
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon
-                      className={styles.technologies_index}
-                      icon={faCaretRight}
-                    />
-                    Firebase
-                  </li>
-                  <li>
-                    {" "}
-                    <FontAwesomeIcon
-                      className={styles.technologies_index}
-                      icon={faCaretRight}
-                    />
-                    Supabase
-                  </li>
-                </ul>
+                <InfiniteLooper speed="4" direction="right">
+                  <ul className={styles.technologies_list}>
+                    <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/nextJS.svg"
+                        alt="Next JS logo"
+                        width={76}
+                        height={55}
+                      />
+                      <p className={styles.technologies_wrapper_label}>
+                        Next js
+                      </p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/react.svg"
+                        alt="react logo"
+                        width={76}
+                        height={55}
+                      />
+                      <p className={styles.technologies_wrapper_label}>React</p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <p className={styles.technologies_wrapper_label}>
+                        Rest API
+                      </p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/graphql.svg"
+                        alt="react logo"
+                        width={76}
+                        height={55}
+                      />
+                      <p className={styles.technologies_wrapper_label}>
+                        GraphQL
+                      </p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/js.svg"
+                        alt="react logo"
+                        width={76}
+                        height={55}
+                      />
+                      <p className={styles.technologies_wrapper_label}>JS</p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/scss.svg"
+                        alt="scss logo"
+                        width={76}
+                        height={55}
+                      />
+                      <p className={styles.technologies_wrapper_label}>
+                        CSS/SCSS
+                      </p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/tailwind.svg"
+                        alt="tailwind logo"
+                        width={76}
+                        height={55}
+                      />
+                      <p className={styles.technologies_wrapper_label}>
+                        Tailwind
+                      </p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/nodejs.svg"
+                        alt="nodejs logo"
+                        width={76}
+                        height={55}
+                      />
+                      <p className={styles.technologies_wrapper_label}>
+                        Node JS
+                      </p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <p className={styles.technologies_wrapper_label}>
+                        Express
+                      </p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/mongodb.svg"
+                        alt="mongodb logo"
+                        width={76}
+                        height={55}
+                      />
+                      <p className={styles.technologies_wrapper_label}>
+                        MongoDB
+                      </p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/firebase.svg"
+                        alt="firebase logo"
+                        width={76}
+                        height={55}
+                      />
+                      <p className={styles.technologies_wrapper_label}>
+                        Firebase
+                      </p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <p className={styles.technologies_wrapper_label}>
+                        Supabase
+                      </p>
+                    </li>
+                  </ul>
+                </InfiniteLooper>
               </div>
             </div>
             <div className={styles.hobbies_container}>

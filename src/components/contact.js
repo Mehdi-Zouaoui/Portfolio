@@ -6,6 +6,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useForm } from "react-hook-form";
+import Link from "next/link";
+
 const Contact = () => {
   return (
     <div className={styles.contact}>
@@ -15,25 +17,26 @@ const Contact = () => {
         <p>md1.zouaoui@gmail.com</p>
         <ul className={styles.contact_social}>
           <li>
-            {" "}
-            <FontAwesomeIcon
-              className={styles.contact_social_item}
-              icon={faLinkedin}
-            />
+            <a
+              href="https://www.linkedin.com/in/mehdi-zouaoui-926476186/"
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                className={styles.contact_social_item}
+                icon={faLinkedin}
+              />
+            </a>
           </li>
           <li>
-            {" "}
-            <FontAwesomeIcon
-              className={styles.contact_social_item}
-              icon={faGithub}
-            />
-          </li>
-          <li>
-            {" "}
-            <FontAwesomeIcon
-              className={styles.contact_social_item}
-              icon={faTwitter}
-            />
+            <a
+              href="https://github.com/Mehdi-Zouaoui?tab=repositories"
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                className={styles.contact_social_item}
+                icon={faGithub}
+              />
+            </a>
           </li>
         </ul>
       </div>
