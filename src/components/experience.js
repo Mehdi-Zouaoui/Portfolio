@@ -1,5 +1,9 @@
 import styles from "@/styles/experience.module.css";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowDown,
+  faArrowUp,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import gsap from "gsap";
 import { createRef, useLayoutEffect, useRef, useState } from "react";
@@ -30,8 +34,7 @@ const Experience = () => {
     },
     {
       title: "Developpeur Front end chez Reciproq.IT",
-      text:
-        "Ma mission consistait à corriger et finir l'application de l'entreprise développer avec Jquery.\n J'ai ensuite du réaliser la migration de l'application vers React. ",
+      text: "Ma mission consistait à corriger et finir l'application de l'entreprise développer avec Jquery.\n J'ai ensuite du réaliser la migration de l'application vers React. ",
       selected: false,
       badges: ["React", "Jquery", "SCSS", "REST API", "Javascript"],
       localization: "La Défense , France",
@@ -39,8 +42,7 @@ const Experience = () => {
     },
     {
       title: "Developpeur Front end Junior chez Cliclic",
-      text:
-        "Developpeur Web pour Cliclic j'ai eu beaucoup de projet à gérer seul ou en équipe.\n Mes principaux projets était le developpement de jeu interactif pour des pages Facebooks et des régis TV.\n En parralèle j'ai été ammener a developper un application CRUD pour gérer la documentation de l'entreprise.",
+      text: "Developpeur Web pour Cliclic j'ai eu beaucoup de projet à gérer seul ou en équipe.\n Mes principaux projets était le developpement de jeu interactif pour des pages Facebooks et des régis TV.\n En parralèle j'ai été ammener a developper un application CRUD pour gérer la documentation de l'entreprise.",
       selected: false,
       badges: [
         "React",
@@ -87,7 +89,13 @@ const Experience = () => {
             <div className={styles.job_title}>
               <h4>{job.title}</h4>
               <p>{job.date}</p>
-              <span>{job.selected ? "-" : "+"}</span>
+              <span>
+                {job.selected ? (
+                  <FontAwesomeIcon icon={faArrowUp} />
+                ) : (
+                  <FontAwesomeIcon icon={faArrowDown} />
+                )}
+              </span>
             </div>
 
             <div

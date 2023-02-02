@@ -6,14 +6,14 @@ const NavBar = () => {
         {/* <img className={styles.nav_img} src="LOGO_TWOOLS.png" alt="" /> */}
         <h2 className={styles.nav_name}>Zouaoui Mehdi</h2>
       </div>
-      <ul className={styles.nav_list_container}>
-        <li>Home</li>
+      {/* <ul className={styles.nav_list_container}>
+       
         <li>Skills</li>
         <li>Experience</li>
         <li>Project</li>
         <li>About</li>
         <li>Contact</li>
-      </ul>
+      </ul> */}
     </div>
   );
 };

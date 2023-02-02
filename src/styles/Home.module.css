@@ -36,8 +36,23 @@
 }
 .model {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  z-index: 2;
 }
-
+.profil_picture {
+  border-radius: 50%;
+  z-index: 2;
+  border: 2px solid #2a2626;
+}
+.background_text {
+  position: absolute;
+  color: #252323;
+  font-size: 120px;
+  z-index: 1;
+}
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
@@ -305,11 +320,6 @@
 .presentation_profession {
   font-size: 25px;
 }
-.profil_picture {
-  border-radius: 50%;
-
-  border: 2px solid #2a2626;
-}
 
 .about_container {
   display: flex;
@@ -354,14 +364,15 @@
 }
 .technologies_container {
 }
-.technologies_list{
-  display:flex;
+.technologies_list {
+  display: flex;
 }
 .technologies_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: none;
 }
 .technologies_wrapper {
   font-size: 10px;
@@ -369,17 +380,18 @@
 
 .technologies_list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  background: white;
 
   list-style: none;
+  color: #2a2626;
 }
 .technologies_list li {
   width: 24%;
   margin-top: 10px;
+  margin-right: 15px;
 }
 .technologies_index {
-  color: #f5cb5c;
+  color: rgb(245, 203, 92);
   margin-right: 3px;
 }
 .social_list {
@@ -390,6 +402,8 @@
 }
 .social_li {
   background-color: #2a2626;
+  box-shadow: rgba(117, 117, 117, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   width: 20%;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -423,60 +437,47 @@
   margin: 40px 0;
 }
 /* Looper styles */
-@keyframes slideAnim {
-  from {
-    transform: translateX(0%);
+
+@media (max-width: 600px) {
+  .main_container {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 30px;
   }
-  to {
-    transform: translateX(-100%);
+  .presentation {
+    font-size: 30px;
+    margin-bottom: 10px;
   }
-}
-
-.looper {
-  width: 100%;
-  overflow: hidden;
-}
-
-.looper__innerList {
-  display: flex;
-  justify-content: center;
-  width: fit-content;
-}
-
-.looper__innerList[data-animate="true"] .looper__listInstance {
-  animation: slideAnim linear infinite;
-}
-
-.looper__listInstance {
-  display: flex;
-  width: max-content;
-
-  animation: none;
-}
-
-.contentBlock {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 120px;
-  margin: 10px;
-  padding: 16px;
-  font-weight: 600;
-  text-align: center;
-  border-radius: 16px;
-}
-.contentBlock--one {
-  width: 120px;
-  background: rgba(255, 255, 255, 0.05);
-  font-weight: 600;
-  font-size: 18px;
-}
-.contentBlock--one:last-of-type {
-  color: var(--green);
-  margin-right: 36px;
-}
-.contentBlock--two {
-  color: var(--green);
-  font-size: 48px;
-  background: rgba(255, 255, 255, 0.05);
+  .presentation_name {
+    font-size: 30px;
+  }
+  .presentation_profession {
+    font-size: 15px;
+    margin: 15px 0;
+  }
+  .profil {
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+  }
+  .details_container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .details_content {
+    width: 100%;
+  }
+  .hobbies_container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+  .social_list {
+    justify-content: center;
+    align-items: center;
+  }
+  .about_text {
+    margin-bottom: 30px;
+  }
 }

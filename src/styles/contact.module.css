@@ -35,6 +35,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
+  justify-content: space-between;
 }
 .form_contact {
   background-color: #f5cb5c;
@@ -57,7 +58,7 @@
   border-radius: 10px;
   align-items: center;
   padding: 10px;
-  width: 32%;
+  width: 30%;
 }
 .form_input {
   padding: 10px;
@@ -72,13 +73,17 @@
 .form_label {
   display: flex;
 }
+
 .form_submit_button {
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
   outline: none;
   border: none;
   background-color: #2a2626;
   color: white;
-  border-radius: 5px;
+  border-radius: 50%;
   margin-left: 5px;
   align-self: flex-end;
   font-size: 20px;
@@ -86,4 +91,14 @@
   -moz-box-shadow: none;
   box-shadow: none;
   position: relative;
+}
+@media (max-width: 600px) {
+  .contact {
+    flex-direction: column;
+  }
+  .contact_left_container,
+  .contact_right_container {
+    width: 100%;
+    border-radius: 0;
+  }
 }

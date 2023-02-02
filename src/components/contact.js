@@ -4,9 +4,10 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useForm } from "react-hook-form";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
 
 const Contact = () => {
   return (
@@ -20,6 +21,7 @@ const Contact = () => {
             <a
               href="https://www.linkedin.com/in/mehdi-zouaoui-926476186/"
               target="_blank"
+              rel="noreferrer"
             >
               <FontAwesomeIcon
                 className={styles.contact_social_item}
@@ -31,6 +33,7 @@ const Contact = () => {
             <a
               href="https://github.com/Mehdi-Zouaoui?tab=repositories"
               target="_blank"
+              rel="noreferrer"
             >
               <FontAwesomeIcon
                 className={styles.contact_social_item}
@@ -59,7 +62,14 @@ const ContactForm = () => {
         <Input label="E-mail" register={register} required />
         <Input label="Object" register={register} required />
         <Input label="Message" register={register} required />
-        <input type="submit" className={styles.form_submit_button} />
+
+        <button type="submit" className={styles.form_submit_button}>
+          {" "}
+          <FontAwesomeIcon
+            className={styles.contact_send_item}
+            icon={faPaperPlane}
+          />
+        </button>
       </div>
 
       {/* name/email/subject/Message */}

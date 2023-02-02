@@ -3,6 +3,7 @@ import Experience from "@/components/experience";
 import Model3d from "@/components/model3d";
 import NavBar from "@/components/navBar";
 import styles from "@/styles/Home.module.css";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
 import {
   faCaretRight,
   faCode,
@@ -11,12 +12,11 @@ import {
   faMugHot,
   faPersonSwimming,
 } from "@fortawesome/free-solid-svg-icons";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
 import { Inter } from "@next/font/google";
 import Head from "next/head";
 import Image from "next/image";
-import InfiniteLooper from "../components/looper";
 import React from "react";
+import InfiniteLooper from "../components/looper";
 import Slider from "../components/slider";
 import SocialsBar from "../components/socialsBar";
 const inter = Inter({ subsets: ["latin"] });
@@ -30,13 +30,6 @@ export default function Home() {
         <NavBar />
         <div className={styles.main_container}>
           <div className={styles.profil}>
-            {/* <Image
-              className={styles.profil_picture}
-              src="/mehdi.jpg"
-              alt="profile"
-              width={200}
-              height={200}
-            /> */}
             <div className={styles.catchphrase}>
               <p className={styles.presentation}>
                 Hey, moi c'est
@@ -48,13 +41,22 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className={styles.model}></div>
+          <div className={styles.model}>
+            <p className={styles.background_text}>TWOOLS</p>
+            <Image
+              className={styles.profil_picture}
+              src="/mehdi.jpg"
+              alt="profile"
+              width={300}
+              height={300}
+            />
+          </div>
         </div>
         {/* <SocialsBar /> */}
         <div className={styles.about_container}>
           <div className={styles.details_container}>
             <div className={styles.details_content}>
-              <h3 className={styles.about_title}>A Propos</h3>
+              <h2 className={styles.about_title}>A Propos</h2>
               <p className={styles.about_text}>
                 Passioné par la création d'applications modernes et interactives
                 en utilisant les dernières technologies. <br /> Je maitrise
@@ -66,7 +68,7 @@ export default function Home() {
                 efficacement.
               </p>
               <div className={styles.technologies_container}>
-                <h3>Technologies</h3>
+                <h2>Technologies</h2>
                 <InfiniteLooper speed="4" direction="right">
                   <ul className={styles.technologies_list}>
                     <li className={styles.technologies_wrapper}>
@@ -92,6 +94,13 @@ export default function Home() {
                       <p className={styles.technologies_wrapper_label}>React</p>
                     </li>
                     <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/rest.svg"
+                        alt="rest logo"
+                        width={76}
+                        height={55}
+                      />
                       <p className={styles.technologies_wrapper_label}>
                         Rest API
                       </p>
@@ -154,11 +163,7 @@ export default function Home() {
                         Node JS
                       </p>
                     </li>
-                    <li className={styles.technologies_wrapper}>
-                      <p className={styles.technologies_wrapper_label}>
-                        Express
-                      </p>
-                    </li>
+
                     <li className={styles.technologies_wrapper}>
                       <Image
                         className={styles.technologies_icon}
@@ -184,8 +189,39 @@ export default function Home() {
                       </p>
                     </li>
                     <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/github.svg"
+                        alt="github logo"
+                        width={76}
+                        height={55}
+                      />
                       <p className={styles.technologies_wrapper_label}>
-                        Supabase
+                        Github
+                      </p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/three.svg"
+                        alt="three logo"
+                        width={76}
+                        height={55}
+                      />
+                      <p className={styles.technologies_wrapper_label}>
+                        Three JS
+                      </p>
+                    </li>
+                    <li className={styles.technologies_wrapper}>
+                      <Image
+                        className={styles.technologies_icon}
+                        src="/icons/blender.svg"
+                        alt="blender logo"
+                        width={76}
+                        height={55}
+                      />
+                      <p className={styles.technologies_wrapper_label}>
+                        Blender
                       </p>
                     </li>
                   </ul>
@@ -193,7 +229,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.hobbies_container}>
-              <h3 className={styles.hobbies_title}>Hobbies</h3>
+              <h2 className={styles.hobbies_title}>Hobbies</h2>
               <ul className={styles.social_list}>
                 <li className={styles.social_li}>
                   {" "}
@@ -246,7 +282,7 @@ export default function Home() {
         <Slider />
 
         <Experience />
-
+        <h1 className={styles.projects_title}>Me Contacter</h1>
         <Contact />
       </div>
     </>
