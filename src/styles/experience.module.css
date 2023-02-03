@@ -5,6 +5,7 @@
   flex-direction: column;
   width: 100%;
   margin-top: 30px;
+  height: 65vh;
 }
 .experience_title {
   margin: 20px;
@@ -27,6 +28,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 2px solid #252323;
+  margin-top: 10px;
+  padding-top: 30px;
+  position: relative;
+}
+.job_title_bullet {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.job_title_date {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .job_content {
   max-height: 0;
@@ -48,10 +65,14 @@
 .job_location {
   display: flex;
   margin-bottom: 10px;
+  
 }
 .job_text {
   white-space: pre-line;
   line-height: 25px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
 }
 .job_badges_list {
   display: flex;

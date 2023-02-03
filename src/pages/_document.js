@@ -1,5 +1,5 @@
 import { Head, Html, Main, NextScript } from "next/document";
-
+import Script from "next/script";
 export default function Document() {
   return (
     <Html lang="en">
@@ -12,6 +12,10 @@ export default function Document() {
         ></link>
       </Head>
       <body>
+        <Script
+          id="kute-cdn"
+          src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"
+        />
         <Main />
         <NextScript />
       </body>
