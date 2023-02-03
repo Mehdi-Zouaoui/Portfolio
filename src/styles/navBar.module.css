@@ -20,7 +20,7 @@
 }
 .nav_list_container {
   display: flex;
-  width: 60%;
+  width: 10%;
   list-style: none;
   justify-content: space-around;
   align-items: center;
@@ -46,7 +46,7 @@
   }
   .nav_list_container {
     display: flex;
-    width: 70%;
+    width: 10%;
     list-style: none;
     justify-content: space-around;
     align-items: center;

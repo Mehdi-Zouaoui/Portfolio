@@ -40,39 +40,35 @@
   justify-content: center;
   align-content: center;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
   z-index: 2;
 }
-.profil_wrapper{
-  position:relative;
-  width:100%;
-  display:flex;
+.profil_wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-.profil_svg{
+.profil_svg {
   position: absolute;
-  height:400px;
-  bottom:-100px;
-  width:600px;
- 
+  height: 400px;
+  bottom: -100px;
+  width: 600px;
+
   transform: translateX(-10%);
 }
 .profil_picture {
-  
   z-index: 2;
-
-
 }
 .background_text {
   position: absolute;
   color: #252323;
   font-size: 120px;
 
-  z-index: 1; 
+  z-index: 1;
   top: 40%;
   transform: translateY(-50%);
- 
 }
 .code {
   font-weight: 700;
@@ -334,6 +330,7 @@
 }
 .presentation {
   font-size: 50px;
+  margin-bottom: 20px;
 }
 .presentation_name {
   color: #f5cb5c;
@@ -352,13 +349,14 @@
   margin-bottom: 30px;
 }
 .about_title {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .about_text {
   margin-bottom: 20px;
 }
 .hobbies_container {
   width: 50%;
+  align-self: flex-end;
   margin-left: 30px;
   display: flex;
   flex-direction: column;
@@ -376,6 +374,10 @@
 }
 .details_content {
   width: 50%;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .personal_container {
@@ -384,6 +386,7 @@
   width: 45%;
 }
 .technologies_container {
+  margin-top: 30px;
 }
 .technologies_list {
   display: flex;
@@ -425,7 +428,7 @@
   background-color: #2a2626;
   box-shadow: rgba(117, 117, 117, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  width: 20%;
+  width: 15%;
   margin-right: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -441,7 +444,8 @@
 .cv_button {
   background-color: #2a2626;
   color: white;
-  padding: 20px;
+  padding: 40px;
+  font-size: 25px;
   border-radius: 10px;
   margin-top: 50px;
   cursor: pointer;
@@ -455,7 +459,7 @@
 }
 .projects_title {
   text-align: center;
-  margin: 40px 0;
+  margin: 100px 0 40px 0;
 }
 /* Looper styles */
 

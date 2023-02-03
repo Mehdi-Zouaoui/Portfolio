@@ -1,8 +1,8 @@
 import styles from "@/styles/contact.module.css";
 import {
   faGithub,
+  faGmail,
   faLinkedin,
-  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -22,32 +22,54 @@ const Slider = () => {
     {
       title: "Twools",
       content: "Projet entreprenarial",
+      description: `Twools est une application permettant aux streamers du créer
+      affichage animé et/ou interactif avec leurs communauté vià des "twools".
+      Il existe une liste non exaustive de twools comme des mini jeux, des sondage, des elements 3d ou encore des roue de la chance`,
+      client_side_infos:
+        "Coté client l'application est developper avec Next js et le style avec Tailwind. Pour les composant 3d j'ai utilisé React Three Fiber ",
+      server_side_infos:
+        "Server gérer avec Next et la base de données dans un premier temps avec MongoDB puis un migration vers Supabase pour gérer la manipulation de données en temps réel, Api GraphQL",
       clicked: false,
       image: "LOGO_TWOOLS.png",
     },
     {
       title: "Generateur de message",
       content: "Developpement Full Stack React et Express",
+      description: ``,
+      client_side_infos: "",
+      server_side_infos: "",
       clicked: false,
     },
     {
-      title: "Bibliothèque Cinema",
+      title: "Bibliothèques Cinéma",
       content: "Developpement Front avec React",
+      description: "Projet de bibliothèque personnel de vos films favoris.",
+      client_side_infos: "Projet developper avec React",
+      server_side_infos: "Base de données local et server JSON",
       clicked: false,
     },
     {
       title: "Documentation personnel",
       content: "Developpement Angular",
+      description: ``,
+      client_side_infos: " ",
+      server_side_infos: "",
       clicked: false,
     },
     {
       title: "Site promotionel",
       content: "Developpement Javascript et gestion des données avec Firebase ",
+      description: ``,
+      client_side_infos: " ",
+      server_side_infos: "",
       clicked: false,
     },
     {
       title: "Site E-commerce",
       content: "Developpement Front avec React ",
+      description: ``,
+      client_side_infos: " ",
+      server_side_infos: "",
       clicked: false,
     },
   ]);
@@ -61,6 +83,9 @@ const Slider = () => {
       query: {
         title: item.title,
         content: item.content,
+        description: item.description,
+        client_side_infos: item.client_side_infos,
+        server_side_infos: item.server_side_infos,
       },
     });
   };
