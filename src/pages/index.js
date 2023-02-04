@@ -44,7 +44,7 @@ export default function Home() {
           <div className={styles.model}>
             <p className={styles.background_text}>TWOOLS</p>
             <div className={styles.profil_wrapper}>
-              <svg
+            <svg
                 id="visual"
                 className={styles.profil_svg}
                 viewBox="0 0 900 600"
@@ -52,7 +52,28 @@ export default function Home() {
                 height="600"
               >
                 <g transform="translate(473.88176256767235 333.4470875202977)">
-                  <path fill="#f5cb5c">
+                <defs>
+                      <linearGradient
+                        id="lgrad"
+                        x1="0%"
+                        y1="50%"
+                        x2="100%"
+                        y2="50%"
+                      >
+                        <stop
+                          offset="0%"
+                          style={{stopColor:"#f5cb5b" , stopOpacity:"1"}}
+                          
+                        />
+                        <stop
+                          offset="100%"
+                          style={{stopColor:"#567189" , stopOpacity:"1"}}
+                         
+                        />
+                      </linearGradient>
+                    </defs>
+                  <path fill="url(#lgrad)">
+                    
                     <animate
                       attributeName="d"
                       dur="10000ms"

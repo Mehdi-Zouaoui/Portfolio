@@ -31,6 +31,8 @@ const Slider = () => {
         "Server gérer avec Next et la base de données dans un premier temps avec MongoDB puis un migration vers Supabase pour gérer la manipulation de données en temps réel, Api GraphQL",
       clicked: false,
       image: "LOGO_TWOOLS.png",
+      about: "Developpement fullstack",
+      link: "https://github.com/Mehdi-Zouaoui/Twools",
     },
     {
       title: "Generateur de message",
@@ -39,6 +41,9 @@ const Slider = () => {
       client_side_infos: "",
       server_side_infos: "",
       clicked: false,
+      image: "",
+      about: "",
+      link: "",
     },
     {
       title: "Bibliothèques Cinéma",
@@ -47,14 +52,18 @@ const Slider = () => {
       client_side_infos: "Projet developper avec React",
       server_side_infos: "Base de données local et server JSON",
       clicked: false,
+      about: "Developpement frontend ",
+      link: "https://github.com/Mehdi-Zouaoui/MoviesBoard",
     },
     {
-      title: "Documentation personnel",
-      content: "Developpement Angular",
-      description: ``,
+      title: "DeezWeb",
+      content: "Bibliothèque musical local",
+      about: "Developpement fullstack",
+      description: `Deez`,
       client_side_infos: " ",
-      server_side_infos: "",
+      server_side_infos: null,
       clicked: false,
+      link: "",
     },
     {
       title: "Site promotionel",
@@ -63,6 +72,8 @@ const Slider = () => {
       client_side_infos: " ",
       server_side_infos: "",
       clicked: false,
+      about: "Developpement frontend",
+      link: "",
     },
     {
       title: "Site E-commerce",
@@ -71,6 +82,8 @@ const Slider = () => {
       client_side_infos: " ",
       server_side_infos: "",
       clicked: false,
+      about: "Developpement frontend",
+      link: "",
     },
   ]);
   useLayoutEffect(() => {
@@ -86,6 +99,8 @@ const Slider = () => {
         description: item.description,
         client_side_infos: item.client_side_infos,
         server_side_infos: item.server_side_infos,
+        about: item.about,
+        link: item.link,
       },
     });
   };
