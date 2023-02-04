@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <div className={styles.contact}>
       <div className={styles.contact_left_container}>
-        <h2>Disponnible pour toutes opportunités Freelance </h2>
+        <h2>Disponible pour toutes opportunités Freelance </h2>
         <p>Envoyez moi un mail ou contacez moi sur mes reseaux</p>
         <p>md1.zouaoui@gmail.com</p>
         <ul className={styles.contact_social}>
@@ -62,14 +62,16 @@ const ContactForm = () => {
         <Input label="E-mail" register={register} required />
         <Input label="Object" register={register} required />
         <Input label="Message" register={register} required />
-
-        <button type="submit" className={styles.form_submit_button}>
+        <div className={styles.contact_send_wrapper}>
           {" "}
-          <FontAwesomeIcon
-            className={styles.contact_send_item}
-            icon={faPaperPlane}
-          />
-        </button>
+          <button type="submit" className={styles.form_submit_button}>
+            {" "}
+            <FontAwesomeIcon
+              className={styles.contact_send_item}
+              icon={faPaperPlane}
+            />
+          </button>
+        </div>
       </div>
 
       {/* name/email/subject/Message */}

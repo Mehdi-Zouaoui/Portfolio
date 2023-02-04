@@ -7,7 +7,7 @@
 }
 .contact_left_container {
   width: 40%;
-  background: #000;
+  background: #567189;
   border-top-left-radius: 10px;
   padding: 15px;
   display: flex;
@@ -18,7 +18,7 @@
 .contact_right_container {
   width: 60%;
   border-top-right-radius: 10px;
-  background: #f5cb5c;
+  background: #cfb997;
   color: #2a2626;
   height: 100%;
 }
@@ -38,7 +38,7 @@
   justify-content: space-between;
 }
 .form_contact {
-  background-color: #f5cb5c;
+  background-color: #cfb997;
   border-top-right-radius: 10px;
 }
 .form_long_input_container {
@@ -73,7 +73,11 @@
 .form_label {
   display: flex;
 }
-
+.contact_send_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
 .form_submit_button {
   display: flex;
   align-items: center;
