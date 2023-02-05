@@ -11,7 +11,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body>
+      <body  >
         <Script
           id="kute-cdn"
           src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"
