@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 
@@ -13,6 +14,12 @@ const Contact = () => {
   return (
     <div className={styles.contact}>
       <div className={styles.contact_left_container}>
+        <Image
+          width={200}
+          height={200}
+          alt="avatar"
+          src="/icon_perso_blanc.png"
+        />
         <h2>Disponible pour toutes opportunités Freelance </h2>
         <p>Envoyez moi un mail ou contacez moi sur mes reseaux</p>
         <p>md1.zouaoui@gmail.com</p>
@@ -58,8 +65,10 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form_contact}>
       {/* register your input into the hook by invoking the "register" function */}
       <div className={styles.inputs_container}>
-        <Input label="Name" register={register} required />
-        <Input label="E-mail" register={register} required />
+        <div className={styles.inputs_name}>
+          <Input label="Name" register={register} required />
+          <Input label="E-mail" register={register} required />
+        </div>
         <Input label="Object" register={register} required />
         <Input label="Message" register={register} required />
         <div className={styles.contact_send_wrapper}>
@@ -84,8 +93,9 @@ const ContactForm = () => {
 
 const Input = ({ label, register, required }) => (
   <div
+    style={label === "Message" ? { height: "200px" } : {}}
     className={
-      label === "Message"
+      label === "Message" || label === "Object"
         ? styles.form_long_input_container
         : styles.form_short_input_container
     }

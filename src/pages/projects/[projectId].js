@@ -1,12 +1,12 @@
 import styles from "@/styles/project.module.css";
-import { useRouter } from "next/router";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faCaretRight,
   faDisplay,
   faServer,
 } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRouter } from "next/router";
 import React from "react";
 const ProjectDetails = () => {
   const router = useRouter();
@@ -34,15 +34,15 @@ const ProjectDetails = () => {
   return (
     <div className={styles.project_container}>
       <div className={styles.project_wrapper}>
+        <p className={styles.project_about}>{props.about}</p>
         <div className={styles.project_left_container}>
-          <p className={styles.project_about}>{props.about}</p>
           <div className={styles.project_github}>
             <div>
               <h1 className={styles.project_title}>{props.title}</h1>
               <p>{props.content}</p>
             </div>
             <div>
-              <a href={props.link} target="_blank">
+              <a href={props.link} target="_blank" rel="noreferrer">
                 {" "}
                 <FontAwesomeIcon
                   icon={faGithub}
@@ -51,9 +51,9 @@ const ProjectDetails = () => {
               </a>
             </div>
           </div>
-          <div>{props.description}</div>
+          <div style={{ width: "90%" }}>{props.description}</div>
           <div>
-            <h2>
+            <h2 className={styles.project_subtitle}>
               {" "}
               <FontAwesomeIcon
                 icon={faDisplay}
@@ -61,11 +61,11 @@ const ProjectDetails = () => {
               />{" "}
               Client{" "}
             </h2>
-            <p>{props.client_side_infos}</p>{" "}
+            <p style={{ width: "90%" }}>{props.client_side_infos}</p>{" "}
           </div>
           <div>
             <div>
-              <h2>
+              <h2 className={styles.project_subtitle}>
                 {" "}
                 <FontAwesomeIcon
                   icon={faServer}
@@ -73,12 +73,12 @@ const ProjectDetails = () => {
                 />{" "}
                 Serveur
               </h2>
-              <p> {props.server_side_infos}</p>
+              <p style={{ width: "90%" }}> {props.server_side_infos}</p>
             </div>
           </div>
           <div>
-            <h3>Technologie</h3>
-            <ul className={styles.project_techs}>
+            <h3 className={styles.project_subtitle}>Technologie</h3>
+            <ul className={styles.project_techs} style={{ width: "90%" }}>
               <li>
                 <FontAwesomeIcon
                   icon={faCaretRight}
@@ -121,11 +121,15 @@ const ProjectDetails = () => {
           </div>
         </div>
         <div className={styles.project_right_container}>
-          {/* <div
-            className={styles.project_img}
+          <div
+            className={styles.project_right_screen}
             style={{
               backgroundImage: "url(/mb.gif)",
             }}
+          ></div>
+          {/* <div
+            className={styles.project_img}
+           
           ></div> */}
         </div>
       </div>

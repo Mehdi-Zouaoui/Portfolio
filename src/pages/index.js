@@ -5,10 +5,10 @@ import NavBar from "@/components/navBar";
 import styles from "@/styles/Home.module.css";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
 import {
+  faArrowDown,
   faBeerMugEmpty,
   faCaretRight,
   faCode,
-  faArrowDown,
   faDumbbell,
   faGamepad,
   faMugHot,
@@ -35,7 +35,7 @@ export default function Home() {
             <p className={styles.presentation}>
               <span className={styles.presentation_name}>
                 {" "}
-                Mehdi <span>Z</span>
+                MEHDI <span>Z</span>
                 <svg
                   id="visual"
                   className={styles.name_lettre_svg}
@@ -135,15 +135,7 @@ export default function Home() {
               />
             </div>
           </div> */}
-        <div className={styles.mouse_icon}>
-          <FontAwesomeIcon className={styles.mouse_arrow} icon={faArrowDown} />
-          <Image
-            src={"/icons/mouse.svg"}
-            alt="profile"
-            width={50}
-            height={50}
-          />
-        </div>
+        <div className={styles.mouse}></div>
       </section>
       {/* <SocialsBar /> */}
       <section className={styles.about_container}>
@@ -373,7 +365,10 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.projects_section}>
-        <h1 className={styles.projects_title}>Projets</h1>
+        <div className={styles.projects_title}>
+          <h2>Projets</h2>
+          <div className={styles.projects_line} />
+        </div>
         <Slider />
       </section>
       <section className={styles.experience_section}>
@@ -383,6 +378,7 @@ export default function Home() {
       <section className={styles.contact_section}>
         <h1 className={styles.projects_title}>Me Contacter</h1>
         <Contact />
+        <div className={styles.footer}>ICI C EST LES RESEAU</div>
       </section>
     </div>
   );

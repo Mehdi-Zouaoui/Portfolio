@@ -90,7 +90,7 @@ const Experience = () => {
               <p className={styles.job_title_bullet}>0{index + 1}/</p>
               <h3 className={styles.job_title_content}>{job.title}</h3>
               <p className={styles.job_title_date}>{job.date}</p>
-              <span>
+              <span style={{ color: "white" }}>
                 {job.selected ? (
                   <FontAwesomeIcon icon={faArrowUp} />
                 ) : (

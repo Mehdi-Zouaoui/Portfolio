@@ -4,8 +4,15 @@
 .project_wrapper {
   width: 100%;
   height: 100vh;
-
+  padding: 50px;
   display: flex;
+  justify-content: space-between;
+  font-family: "Space Mono", monospace;
+}
+.project_about {
+  position: absolute;
+  top: 20;
+  color: #fad6a5;
 }
 .project_left_container {
   width: 50%;
@@ -15,16 +22,32 @@
 }
 .project_right_container {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project_right_screen {
+  border: 4px solid #567189;
+  height: 75%;
+  width: 95%;
+  background-size: cover;
+  border-radius: 5px;
 }
 .project_github {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 90%;
 }
 .project_github_icon {
   font-size: 50px;
 }
-.project_title{
-  font-size : 60px;
+.project_title {
+  font-size: 60px;
+  font-family: "Montserrat", sans-serif;
+}
+.project_subtitle {
+  font-family: "Montserrat", sans-serif;
 }
 .project_img {
   width: 800px;
@@ -43,5 +66,5 @@
 }
 .project_tech_icon {
   margin-right: 10px;
-  color: #f5cb5b;
+  color: #fad6a5;
 }
