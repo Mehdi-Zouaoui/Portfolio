@@ -136,6 +136,8 @@ export default function Home() {
             </div>
           </div> */}
         <div className={styles.mouse_icon}>
+          <span className={styles.mouse_arrow_down}></span>
+          <span className={styles.moouse_arrow_down_2}></span>
           <FontAwesomeIcon className={styles.mouse_arrow} icon={faArrowDown} />
           <Image
             src={"/icons/mouse.svg"}
