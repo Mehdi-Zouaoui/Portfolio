@@ -1,9 +1,10 @@
 import styles from "@/styles/slider.module.css";
 import {
+  faArrowRight,
   faCode,
   faDumbbell,
+  faFolder,
   faGamepad,
-  faLaptop,
   faMugHot,
   faPersonSwimming,
 } from "@fortawesome/free-solid-svg-icons";
@@ -21,7 +22,8 @@ const Slider = () => {
   const [items, setItems] = useState([
     {
       title: "Twools",
-      content: "Projet entreprenarial",
+      content:
+        "Application web permettant aux videastes/streamers de créer overlays interactif et dynamics via des widgets/twools",
       description: `Twools est une application permettant aux streamers du créer
       affichage animé et/ou interactif avec leurs communauté vià des "twools".
       Il existe une liste non exaustive de twools comme des mini jeux, des sondage, des elements 3d ou encore des roue de la chance`,
@@ -30,60 +32,62 @@ const Slider = () => {
       server_side_infos:
         "Server gérer avec Next et la base de données dans un premier temps avec MongoDB puis un migration vers Supabase pour gérer la manipulation de données en temps réel, Api GraphQL",
       clicked: false,
+      date: 2023,
+      technologies: ["Next JS", "Supabase", "GraphQL"],
       image: "LOGO_TWOOLS.png",
       about: "Developpement fullstack",
       link: "https://github.com/Mehdi-Zouaoui/Twools",
     },
-    {
-      title: "Generateur de message",
-      content: "Developpement Full Stack React et Express",
-      description: ``,
-      client_side_infos: "",
-      server_side_infos: "",
-      clicked: false,
-      image: "",
-      about: "",
-      link: "",
-    },
+
     {
       title: "Bibliothèques Cinéma",
-      content: "Developpement Front avec React",
+      content:
+        "Une applicaiton pour se souvenir de tous vos films favoris dans les moindres details.",
       description: "Projet de bibliothèque personnel de vos films favoris.",
       client_side_infos: "Projet developper avec React",
       server_side_infos: "Base de données local et server JSON",
       clicked: false,
       about: "Developpement frontend ",
       link: "https://github.com/Mehdi-Zouaoui/MoviesBoard",
+      date: 2020,
+      technologies: ["/icons/nextJS.svg", "/icons/graphql.svg"],
     },
     {
       title: "DeezWeb",
-      content: "Bibliothèque musical local",
+      content: "Un clone de deezer",
       about: "Developpement fullstack",
       description: `Deez`,
       client_side_infos: " ",
       server_side_infos: null,
       clicked: false,
       link: "",
+      date: 2020,
+      technologies: ["/icons/nextJS.svg"],
     },
     {
       title: "Site promotionel",
-      content: "Developpement Javascript et gestion des données avec Firebase ",
+      content:
+        "Un site publicitaire pour la sortie du nouvel album d'un artiste en l'occurence Roméo Elvis ( créer avant les polémique autout de ce monsieur )",
       description: ``,
       client_side_infos: " ",
       server_side_infos: "",
       clicked: false,
       about: "Developpement frontend",
       link: "",
+      date: 2019,
+      technologies: ["/icons/nextJS.svg"],
     },
     {
       title: "Site E-commerce",
-      content: "Developpement Front avec React ",
+      content: "Site de vente en ligne  pour la société Newmade Audiovisuel",
       description: ``,
       client_side_infos: " ",
       server_side_infos: "",
       clicked: false,
       about: "Developpement frontend",
       link: "",
+      date: 2022,
+      technologies: ["/icons/nextJS.svg"],
     },
   ]);
   useLayoutEffect(() => {
@@ -148,7 +152,7 @@ const Slider = () => {
 
           gsap.to(el.current, {
             height: "40vh",
-            width: items[index].clicked ? "25vw" : "13vw",
+            width: items[index].clicked ? "25vw" : "15vw",
             duration: 2.5,
             ease: "elastic(1, .3)",
           });
@@ -191,7 +195,26 @@ const Slider = () => {
           <h3 className={styles.item_title}>{item.title}</h3>
           {item.clicked ? (
             <div className={styles.item_content_container}>
-              <p className={styles.item_content}>{item.content}</p>
+              <div className={styles.item_content_details}>
+                <div className={styles.item_calendar}>
+                  <span>Date</span>
+                  <p>{item.date}</p>
+                </div>
+                <p className={styles.item_content}>{item.content}</p>
+              </div>
+              <div className={styles.item_technologies_container}>
+                {" "}
+                <span>Technologies</span>
+                <div className={styles.item_technologies_wrapper}>
+                  {item.technologies.map((tech, index) => (
+                    <div key={index}>
+                      {" "}
+                      <FontAwesomeIcon icon={faArrowRight} />
+                      {tech}
+                    </div>
+                  ))}
+                </div>
+              </div>
 
               <div
                 className={styles.item_learn_more}
@@ -199,14 +222,14 @@ const Slider = () => {
                   sendProps(item);
                 }}
               >
-                Learn More
+                Learn More <FontAwesomeIcon icon={faArrowRight} />
               </div>
             </div>
           ) : (
             ""
           )}
 
-          <FontAwesomeIcon icon={faLaptop} />
+          <FontAwesomeIcon icon={faFolder} />
           {/* <img src={item.img} className={styles.sliderItem_img} alt="" /> */}
         </div>
       ))}
