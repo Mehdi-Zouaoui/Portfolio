@@ -15,11 +15,11 @@ const NavBar = ({ width }) => {
           className={styles.nav_img}
           src="/MZ_LOGO.svg"
           alt=""
-          width={width <= 640 ? 200 : 60}
+          width={60}
           height={100}
         />
       </div>
-      {width <= 640 ? (
+      {/* {width <= 640 ? (
         <div>Bourgir</div>
       ) : (
         <ul className={styles.nav_list_container}>
@@ -37,9 +37,9 @@ const NavBar = ({ width }) => {
             className={styles.contact_social_item}
             icon={faCircleHalfStroke}
           />
-        </li> */}
+        </li> 
         </ul>
-      )}
+      )}*/}
     </div>
   );
 };

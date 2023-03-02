@@ -78,7 +78,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 300px;
+  height: 350px;
   max-height: 500px;
   transition: all 2s cubic-bezier(0, 1, 0, 1);
 }
@@ -111,28 +111,39 @@
   margin-right: 5px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 50em) {
+  .experience_title {
+    font-size: 50px;
+  }
   .job_list {
     width: 90%;
   }
   .job_text {
-    font-size: 15px;
+    font-size: 12px;
   }
   .job_content {
   }
+  .job_title_content {
+    font-size: 22px;
+    width: 90%;
+  }
+  .job_title_date,
+  .job_title_bullet {
+    font-size: 12px;
+  }
   .job_content_show {
     height: auto;
+  }
+  .job_location {
+    font-size: 12px;
   }
   .job_badges_list {
     flex-wrap: wrap;
   }
   .job_badge {
     margin-bottom: 10px;
+    font-size: 12px;
   }
-  .experience_container {
-    margin-bottom: 100px;
-  }
-  .experience_container {
-    height: 70vh;
+  .job_badges_list {
   }
 }

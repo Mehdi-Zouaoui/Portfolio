@@ -9,15 +9,14 @@ import gsap from "gsap";
 import { createRef, useLayoutEffect, useRef, useState } from "react";
 
 const Experience = () => {
-  const [height, setHeight] = useState(0);
   const [jobs, setJobs] = useState([
     {
       title: "Developpeur Full Stack et Gérant Twools ",
-      text: `Twools est mon projet entreprenarial qui a été très formateur.\n\
-       Pour ce projet j'ai du tout faire seul. \n\
-       Développer le client et le serveur de l'application.\n\ Créer un API et une base de donné.\n\
-        Manipuler l'API Twitch et la gestion en temps réel des données. \n\
-        Créer un système d'authentification sécurisé et gérer la securité des données utilisateur `,
+      text: `Twools est mon projet entreprenariale qui a été très formateur.\n\
+      Pour ce projet j'ai du tout faire seul. \n\
+      Développer le client et le serveur de l'application.\n\ Créer un API et une base de données.\n\
+      Manipuler l'API Twitch et la gestion en temps réel des données. \n\
+      Créer un système d'authentification sécurisé et géré la sécurité des données utilisateur.`,
       selected: true,
       badges: [
         "Next js",
@@ -32,14 +31,11 @@ const Experience = () => {
       localization: "Sannois, France",
       date: "2022 - Present",
     },
- 
+
     {
       title: "Developpeur Full Stack Newmade Audiovisuel ",
-      text: `Twools est mon projet entreprenarial qui a été très formateur.\n\
-       Pour ce projet j'ai du tout faire seul. \n\
-       Développer le client et le serveur de l'application.\n\ Créer un API et une base de donné.\n\
-        Manipuler l'API Twitch et la gestion en temps réel des données. \n\
-        Créer un système d'authentification sécurisé et gérer la securité des données utilisateur `,
+      text: `Unique developpeur pour Newmade Audiovisuel j'étais en charge de la création dans un premier d'un site vitrine pour la socitétée puis de créer la partie e-commerce \n\
+      Une mission excitante qui m’a permis d'améliorer mes compétences dans le développement full stack et de me perfectionner dans l'utilisation du framework Next JS`,
       selected: false,
       badges: [
         "Next js",
@@ -54,7 +50,7 @@ const Experience = () => {
       localization: "Sannois, France",
       date: "2022 - Present",
     },
-   
+
     {
       title: "Developpeur Front end chez Reciproq.IT",
       text: "Ma mission consistait à corriger et finir l'application de l'entreprise développer avec Jquery.\n J'ai ensuite du réaliser la migration de l'application vers React. ",
@@ -65,7 +61,7 @@ const Experience = () => {
     },
     {
       title: "Developpeur Front end Junior chez Cliclic",
-      text: "Developpeur Web pour Cliclic j'ai eu beaucoup de projet à gérer seul ou en équipe.\n Mes principaux projets était le developpement de jeu interactif pour des pages Facebooks et des régis TV.\n En parralèle j'ai été ammener a developper un application CRUD pour gérer la documentation de l'entreprise.",
+      text: " Mes principaux projets étaient le développement de jeux interactifs pour des pages Facebooks et le développement d'outils pour des régis TV.\n En parallèle j'ai été amener à développer une application CRUD pour gérer la documentation de l'entreprise. \n J'ai fait mes premiers pats dans le monde professionnel du développement grace à Cliclic ou j'ai appris énormément et eu l'occasion de pratiquer sur beaucoup de technologies différentes.",
       selected: false,
       badges: [
         "React",
@@ -82,14 +78,10 @@ const Experience = () => {
       date: "2019 - 2021",
     },
   ]);
-  const [animation, setAnimation] = useState();
-  const comp = useRef();
-  const timeline = useRef();
-  const jobsRef = useRef([...Array(jobs.length)].map(() => createRef()));
 
   const selectedJob = (job, index) => {
     const newJobs = [...jobs];
-    console.log(newJobs);
+
     newJobs.forEach((it, i) => {
       if (index === i) it.selected = true;
       else it.selected = false;

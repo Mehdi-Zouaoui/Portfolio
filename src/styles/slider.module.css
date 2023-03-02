@@ -145,7 +145,7 @@
   width: 150px;
   height: 150px;
 }
-@media (max-width: 40em) {
+@media (max-width: 50em) {
   .container {
     flex-direction: column;
   }

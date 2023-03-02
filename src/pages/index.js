@@ -19,16 +19,21 @@ import {
   faMugHot,
   faPersonSwimming,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Inter } from "@next/font/google";
 import Head from "next/head";
 import Image from "next/image";
-import React from "react";
+import React, {
+  createRef,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import InfiniteLooper from "../components/looper";
 import Slider from "../components/slider";
 import SocialsBar from "../components/socialsBar";
 const inter = Inter({ subsets: ["latin"] });
-import { createRef, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
   let [width, setWidth] = useState(null);
@@ -64,7 +69,7 @@ export default function Home() {
           <div className={styles.catchphrase}>
             <p className={styles.presentation}>
               <span className={styles.presentation_name}>
-                MEHDI {width <= 640 ? <br /> : null} <span>Z</span>
+                MEHDI {width <= 1730 ? <br /> : null} <span>Z</span>
                 <svg
                   id="visual"
                   className={styles.name_lettre_svg}
@@ -114,7 +119,14 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.presentation_mail}>
-          <p>md1.zouaoui@gmail.com</p>
+          {/* <span className={styles.copy_mail}>Cliquer pour copier</span> */}
+          <p
+            onClick={() => {
+              navigator.clipboard.writeText("md1.zouaoui@gmail.com");
+            }}
+          >
+            md1.zouaoui@gmail.com
+          </p>
           <div className={styles.presentation_mail_line_container}>
             <div className={styles.presentation_mail_line} />
           </div>
@@ -122,16 +134,20 @@ export default function Home() {
         <div className={styles.presentation_socials_wrapper}>
           <ul className={styles.presentation_socials_list}>
             <li className={styles.presentation_socials_list_item}>
-              <FontAwesomeIcon
-                className={styles.contact_social_item}
-                icon={faLinkedin}
-              />
+              <a href="https://www.linkedin.com/in/mehdi-zouaoui-926476186/">
+                <FontAwesomeIcon
+                  className={styles.contact_social_item}
+                  icon={faLinkedin}
+                />
+              </a>
             </li>
             <li className={styles.presentation_socials_list_item}>
-              <FontAwesomeIcon
-                className={styles.contact_social_item}
-                icon={faGithub}
-              />
+              <a href="https://github.com/Mehdi-Zouaoui?tab=repositories">
+                <FontAwesomeIcon
+                  className={styles.contact_social_item}
+                  icon={faGithub}
+                />
+              </a>
             </li>
           </ul>
           <div className={styles.presentation_social_line_container}>
@@ -371,7 +387,7 @@ export default function Home() {
       <section className={styles.projects_section} id="projects">
         <div className={styles.projects_title}>
           <div className={styles.projects_line} />
-          <h2>Projets </h2>
+          <h2 className={styles.projects_title_content}>Projets </h2>
           <div className={styles.projects_line} />
         </div>
         <Slider />
@@ -382,9 +398,17 @@ export default function Home() {
 
       <section className={styles.contact_section}>
         <h1 className={styles.projects_title}>Me Contacter</h1>
-        <Contact />
+        <Contact width={width} />
         <div className={styles.footer}>
-          <div> md1.zouaoui@gmail.com</div>
+          <div
+            onClick={() => {
+              navigator.clipboard.writeText("md1.zouaoui@gmail.com");
+            }}
+            style={{ cursor: "pointer" }}
+          >
+            {" "}
+            md1.zouaoui@gmail.com
+          </div>
           <ul className={styles.footer_list}>
             <li>
               <a

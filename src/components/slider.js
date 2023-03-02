@@ -24,18 +24,19 @@ const Slider = () => {
     {
       title: "Twools",
       content:
-        "Application web permettant aux videastes/streamers de créer overlays interactif et dynamics via des widgets/twools ",
+        "Application web permettant aux vidéastes/streamers de créer des overlays interactifs et dynamics via des widgets/twools",
       description: `Twools est une application permettant aux streamers du créer
-      affichage animé et/ou interactif avec leurs communauté vià des "twools".
-      Il existe une liste non exaustive de twools comme des mini jeux, des sondage, des elements 3d ou encore des roue de la chance`,
+      affichage animé et/ou interactif avec leurs communautés vià des "twools".
+      Il existe une liste non exhaustive de twools comme des mini-jeux, des sondages, des éléments 3ds ou encore des roues de la chance.`,
       client_side_infos:
-        "Coté client l'application est developper avec Next js et le style avec Tailwind. Pour les composant 3d j'ai utilisé React Three Fiber ",
+        "Côté client l'application est développée avec Next js et le style avec Tailwind. Pour les composants 3ds j'ai utilisé à react Three Fibre",
       server_side_infos:
-        "Server gérer avec Next et la base de données dans un premier temps avec MongoDB puis un migration vers Supabase pour gérer la manipulation de données en temps réel, Api GraphQL",
+        "Le serveur est géré avec Next JS et, pour la base de données, je suis parti dans un premier temps sur MongoDB puis ai effectué une migration vers Supabase pour gérer la manipulation de données en temps réel. Enfin je suis partie sur une API REST au départ pour migrer vers GraphQL pour, encore une fois, gérer les données en temps réel. ",
       clicked: false,
       date: 2023,
       technologies: ["Next JS", "Supabase", "GraphQL"],
       image: "LOGO_TWOOLS.png",
+      video: "/videos/moviesBoard.mp4",
       about: "Developpement fullstack",
       link: "https://github.com/Mehdi-Zouaoui/Twools",
     },
@@ -44,12 +45,15 @@ const Slider = () => {
       title: "Bibliothèques Cinéma",
       content:
         "Une page web permettant d'enregistrer tous les films favoris d'un utilisateur ou de créer sa propre watchlist",
-      description: "Projet de bibliothèque personnel de vos films favoris.",
-      client_side_infos: "Projet developper avec React",
-      server_side_infos: "Base de données local et server JSON",
+      description:
+        "MoviesBoard est une bibliothèque personnelle pour enregistrer vos fils favoris avec la possibilité d'avoir les détails du casting et les films similaires à celui-ci choisis pour toujours avoir un film à se mettre sous la dent !",
+      client_side_infos:
+        "Projet développé avec React. On utilise l'api The Movie DB pour récupérer les informations des films. Le style du client est géré avec bootstrap et certaines librairies react notamment pour le slider",
+      server_side_infos: "Serveur local JSON",
       clicked: false,
       about: "Developpement frontend ",
       link: "https://github.com/Mehdi-Zouaoui/MoviesBoard",
+      video: "/videos/moviesBoard.mp4",
       date: 2020,
       technologies: ["React", "Scss", "RESTapi", "JSON"],
     },
@@ -58,38 +62,47 @@ const Slider = () => {
       content:
         "Manipulation de l'API de Deezer pour créer un site web qui peut rechercher et sauvegarder les musiques favoris d'un utilisateur",
       about: "Developpement fullstack",
-      description: `Deez`,
-      client_side_infos: " ",
-      server_side_infos: null,
+      description: `DeezWeb est une bibliothèque musicale gérée grace à l'API de Deezer. Il est possible d'ajouter ses musiques préférées, de les supprimer et de créer des playlists.`,
+      client_side_infos:
+        "Projet développé avec Javascript sans framework. On utilise l'api de Deezer pour récupérer les données des musiques. Le style du client est géré avec bootstrap et CSS",
+      server_side_infos:
+        "L'application est serverless. Les informations sauvegardées sont stocké dans le local storage et le session Storage",
       clicked: false,
       link: "",
       date: 2020,
-      technologies: ["JS", "Firebase", "Bootstrap"],
+      video: "/videos/deezWeb.mp4",
+      technologies: ["JS", "Bootstrap"],
     },
     {
       title: "Site promotionel",
       content:
-        "Un site web publicitaire pour la sortie du nouvel album d'un artiste en l'occurence Roméo Elvis",
-      description: ``,
-      client_side_infos: " ",
-      server_side_infos: "",
+        "Un site web publicitaire pour la sortie du nouvel album d'un artiste en l'occurrence Roméo Elvis",
+      description: `Projet de site publicitaire pour l'album Chocolat de Roméo Elvis inspiré de sa charte graphique rassemblant toutes les informations importantes autour de sa musique`,
+      client_side_infos:
+        "L'intégralité du projet est développée avec JS HTML et CSS sans framework le challenge étant plustot accès sur le design.",
+      server_side_infos: "Uniquement une base de données firebase",
       clicked: false,
       about: "Developpement frontend",
       link: "",
+      video: "",
+      image: "/RE.jpg",
       date: 2019,
       technologies: ["JS", "Firebase", "HTML", "CSS"],
     },
     {
       title: "Site E-commerce",
       content:
-        "Site e-commerce et publicitaire créer pour la société Newmade Audiovisuel  ",
-      description: ``,
-      client_side_infos: " ",
-      server_side_infos: "",
+        "Site e-commerce et publicitaire crée pour la société Newmade Audiovisuel",
+      description: `Le site vitrine de Newmade Audiovisuel, la partie e-commerce est développé mais pas encore en ligne faute de budget.`,
+      client_side_infos:
+        "Site entièrement développer avec Next JS et des librairies tierce pour gérer certains composants. Le style est géré avec Scss",
+      server_side_infos:
+        "Développer avec Next JS. Pour gérer la base de données j'ai utilisé MongoDB",
       clicked: false,
       about: "Developpement frontend",
       link: "",
       date: 2022,
+      video: "/videos/newmade.mp4",
       technologies: ["Next JS", "MongoDB", "Scss"],
     },
   ]);
@@ -108,6 +121,9 @@ const Slider = () => {
         server_side_infos: item.server_side_infos,
         about: item.about,
         link: item.link,
+        video: item.video,
+        technologies: item.technologies,
+        image: item.image,
       },
     });
   };
@@ -143,7 +159,7 @@ const Slider = () => {
     });
     setItems(newItems);
     console.log(items);
-    if (width >= 600) {
+    if (width >= 800) {
       ctx = gsap.context(() => {
         itemsRef.current.forEach((el, index) => {
           gsap.to(el.current, {
@@ -162,7 +178,7 @@ const Slider = () => {
         });
       }, comp);
     }
-    if (width < 600) {
+    if (width < 800) {
       ctx = gsap.context(() => {
         itemsRef.current.forEach((el, index) => {
           gsap.to(el.current, {
@@ -171,7 +187,7 @@ const Slider = () => {
             ease: "elastic(1, .3)",
           });
           gsap.to(el.current, {
-            height: items[index].clicked ? "35vh" : "10vh",
+            height: items[index].clicked ? "50vh" : "10vh",
             duration: 2.5,
             ease: "elastic(1, .3)",
           });
@@ -187,7 +203,7 @@ const Slider = () => {
       {items.map((item, index) => (
         <div
           className={
-            width >= 600
+            width >= 800
               ? ` ${styles.sliderItem_long} `
               : ` ${styles.sliderItem_short}`
           }

@@ -5,22 +5,23 @@ import {
   faGmail,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
-const Contact = () => {
+const Contact = ({ width }) => {
   const [contactAlert, setContactAlert] = useState(false);
   return (
     <div className={styles.contact}>
       <div className={styles.contact_wrapper}>
         <div className={styles.contact_left_container}>
           <Image
-            width={300}
-            height={300}
+            className={styles.contact_image}
+            width={width <= 640 ? 200 : 300}
+            height={width <= 640 ? 200 : 300}
             alt="avatar"
             src="/icon_perso_blanc.png"
           />
@@ -60,14 +61,14 @@ const Contact = () => {
           <ContactForm
             contactAlert={contactAlert}
             setContactAlert={setContactAlert}
+            width={width}
           />
-          {contactAlert === true ? <div>Votre mail à été envoyé</div> : null}
         </div>
       </div>
     </div>
   );
 };
-const ContactForm = ({ contactAlert, setContactAlert }) => {
+const ContactForm = ({ contactAlert, setContactAlert, width }) => {
   const wait = async (ms) => {
     await new Promise((resolve) => {
       return setTimeout(resolve, ms);
@@ -104,13 +105,23 @@ const ContactForm = ({ contactAlert, setContactAlert }) => {
       {/* register your input into the hook by invoking the "register" function */}
       <div className={styles.inputs_container}>
         <div className={styles.inputs_name}>
-          <Input label="Name" required />
-          <Input label="E-mail" required />
+          <Input label="Name" width={width} required />
+          <Input label="E-mail" width={width} required />
         </div>
         <Input label="Object" required />
         <Input label="Message" required />
         <div className={styles.contact_send_wrapper}>
-          {" "}
+          <div
+            className={styles.mail_sended}
+            style={{ opacity: contactAlert === true ? "1" : "0" }}
+          >
+            Votre message à été envoyé{" "}
+            <FontAwesomeIcon
+              className={styles.mail_sended_icon}
+              icon={faCheck}
+            />
+          </div>
+
           <button type="submit" className={styles.form_submit_button}>
             {" "}
             <FontAwesomeIcon
@@ -129,7 +140,7 @@ const ContactForm = ({ contactAlert, setContactAlert }) => {
   );
 };
 
-const Input = ({ label, required }) => (
+const Input = ({ label, required, width }) => (
   <div
     style={label === "Message" ? { height: "200px" } : {}}
     className={
@@ -138,10 +149,26 @@ const Input = ({ label, required }) => (
         : styles.form_short_input_container
     }
   >
-    <label className={styles.form_label}>
-      {label} <p>:</p>
-    </label>
-    <input className={styles.form_input} name={label.toLowerCase()} />
+    {label === "Message" ? (
+      <label style={{ display: "flex", alignSelf: "start" }}>
+        {label} <p>:</p>
+      </label>
+    ) : (
+      <label className={styles.form_label}>
+        {label} <p>:</p>
+      </label>
+    )}
+    {label === "Message" ? (
+      <textarea
+        className={styles.form_textarea}
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+      ></textarea>
+    ) : (
+      <input className={styles.form_input} name={label.toLowerCase()} />
+    )}
   </div>
 );
 
