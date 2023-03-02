@@ -1,6 +1,7 @@
 import styles from "@/styles/slider.module.css";
 import {
   faArrowRight,
+  faCaretRight,
   faCode,
   faDumbbell,
   faFolder,
@@ -23,7 +24,7 @@ const Slider = () => {
     {
       title: "Twools",
       content:
-        "Application web permettant aux videastes/streamers de créer overlays interactif et dynamics via des widgets/twools",
+        "Application web permettant aux videastes/streamers de créer overlays interactif et dynamics via des widgets/twools ",
       description: `Twools est une application permettant aux streamers du créer
       affichage animé et/ou interactif avec leurs communauté vià des "twools".
       Il existe une liste non exaustive de twools comme des mini jeux, des sondage, des elements 3d ou encore des roue de la chance`,
@@ -42,7 +43,7 @@ const Slider = () => {
     {
       title: "Bibliothèques Cinéma",
       content:
-        "Une applicaiton pour se souvenir de tous vos films favoris dans les moindres details.",
+        "Une page web permettant d'enregistrer tous les films favoris d'un utilisateur ou de créer sa propre watchlist",
       description: "Projet de bibliothèque personnel de vos films favoris.",
       client_side_infos: "Projet developper avec React",
       server_side_infos: "Base de données local et server JSON",
@@ -50,11 +51,12 @@ const Slider = () => {
       about: "Developpement frontend ",
       link: "https://github.com/Mehdi-Zouaoui/MoviesBoard",
       date: 2020,
-      technologies: ["/icons/nextJS.svg", "/icons/graphql.svg"],
+      technologies: ["React", "Scss", "RESTapi", "JSON"],
     },
     {
       title: "DeezWeb",
-      content: "Un clone de deezer",
+      content:
+        "Manipulation de l'API de Deezer pour créer un site web qui peut rechercher et sauvegarder les musiques favoris d'un utilisateur",
       about: "Developpement fullstack",
       description: `Deez`,
       client_side_infos: " ",
@@ -62,12 +64,12 @@ const Slider = () => {
       clicked: false,
       link: "",
       date: 2020,
-      technologies: ["/icons/nextJS.svg"],
+      technologies: ["JS", "Firebase", "Bootstrap"],
     },
     {
       title: "Site promotionel",
       content:
-        "Un site publicitaire pour la sortie du nouvel album d'un artiste en l'occurence Roméo Elvis ( créer avant les polémique autout de ce monsieur )",
+        "Un site web publicitaire pour la sortie du nouvel album d'un artiste en l'occurence Roméo Elvis",
       description: ``,
       client_side_infos: " ",
       server_side_infos: "",
@@ -75,11 +77,12 @@ const Slider = () => {
       about: "Developpement frontend",
       link: "",
       date: 2019,
-      technologies: ["/icons/nextJS.svg"],
+      technologies: ["JS", "Firebase", "HTML", "CSS"],
     },
     {
       title: "Site E-commerce",
-      content: "Site de vente en ligne  pour la société Newmade Audiovisuel",
+      content:
+        "Site e-commerce et publicitaire créer pour la société Newmade Audiovisuel  ",
       description: ``,
       client_side_infos: " ",
       server_side_infos: "",
@@ -87,7 +90,7 @@ const Slider = () => {
       about: "Developpement frontend",
       link: "",
       date: 2022,
-      technologies: ["/icons/nextJS.svg"],
+      technologies: ["Next JS", "MongoDB", "Scss"],
     },
   ]);
   useLayoutEffect(() => {
@@ -152,7 +155,7 @@ const Slider = () => {
 
           gsap.to(el.current, {
             height: "40vh",
-            width: items[index].clicked ? "25vw" : "15vw",
+            width: items[index].clicked ? "30vw" : "16vw",
             duration: 2.5,
             ease: "elastic(1, .3)",
           });
@@ -168,7 +171,7 @@ const Slider = () => {
             ease: "elastic(1, .3)",
           });
           gsap.to(el.current, {
-            height: items[index].clicked ? "30vh" : "15vh",
+            height: items[index].clicked ? "35vh" : "10vh",
             duration: 2.5,
             ease: "elastic(1, .3)",
           });
@@ -192,10 +195,6 @@ const Slider = () => {
           onClick={() => elasticAnimation(item, index)}
           key={index}
         >
-<<<<<<< HEAD
-       
-=======
->>>>>>> 6ddde63cfd2d844d5abd5164ae93ed20ac718de4
           <h3 className={styles.item_title}>{item.title}</h3>
           {item.clicked ? (
             <div className={styles.item_content_container}>
@@ -207,13 +206,14 @@ const Slider = () => {
                 <p className={styles.item_content}>{item.content}</p>
               </div>
               <div className={styles.item_technologies_container}>
-                {" "}
                 <span>Technologies</span>
                 <div className={styles.item_technologies_wrapper}>
                   {item.technologies.map((tech, index) => (
                     <div key={index}>
-                      {" "}
-                      <FontAwesomeIcon icon={faArrowRight} />
+                      <FontAwesomeIcon
+                        style={{ marginRight: "10px" }}
+                        icon={faCaretRight}
+                      />
                       {tech}
                     </div>
                   ))}
@@ -233,7 +233,6 @@ const Slider = () => {
             ""
           )}
 
-          <FontAwesomeIcon icon={faFolder} />
           {/* <img src={item.img} className={styles.sliderItem_img} alt="" /> */}
         </div>
       ))}

@@ -27,20 +27,44 @@ import InfiniteLooper from "../components/looper";
 import Slider from "../components/slider";
 import SocialsBar from "../components/socialsBar";
 const inter = Inter({ subsets: ["latin"] });
-
+import { createRef, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
+  let [width, setWidth] = useState(null);
+  const [height, setHeight] = useState(null);
+  useEffect(() => {
+    setWidth(
+      window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth
+    );
+    const resizeListener = () => {
+      // change width from the state object
+      setWidth(
+        window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth
+      );
+    };
+    // set resize listener
+    window.addEventListener("resize", resizeListener);
+
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener("resize", resizeListener);
+    };
+  }, []);
   return (
     <div className={styles.portfolio_container}>
       <section className={styles.main_container}>
-        <NavBar />
+        <NavBar width={width} />
         <div className={styles.profil}>
           <div className={styles.catchphrase}>
             <p className={styles.presentation}>
               <span className={styles.presentation_name}>
-                {" "}
-                MEHDI <span>Z</span>
+                MEHDI {width <= 640 ? <br /> : null} <span>Z</span>
                 <svg
                   id="visual"
                   className={styles.name_lettre_svg}
@@ -347,7 +371,7 @@ export default function Home() {
       <section className={styles.projects_section} id="projects">
         <div className={styles.projects_title}>
           <div className={styles.projects_line} />
-          <h2>Projets</h2>
+          <h2>Projets </h2>
           <div className={styles.projects_line} />
         </div>
         <Slider />

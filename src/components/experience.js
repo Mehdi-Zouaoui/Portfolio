@@ -54,27 +54,7 @@ const Experience = () => {
       localization: "Sannois, France",
       date: "2022 - Present",
     },
-    {
-      title: "Developpeur Full Stack Newmade Audiovisuel ",
-      text: `Twools est mon projet entreprenarial qui a été très formateur.\n\
-       Pour ce projet j'ai du tout faire seul. \n\
-       Développer le client et le serveur de l'application.\n\ Créer un API et une base de donné.\n\
-        Manipuler l'API Twitch et la gestion en temps réel des données. \n\
-        Créer un système d'authentification sécurisé et gérer la securité des données utilisateur `,
-      selected: false,
-      badges: [
-        "Next js",
-        "Tailwind",
-        "Supabase",
-        "MongoDB",
-        "React Three Fiber",
-        "GraphQL",
-        "Twitch API",
-        "Javascript",
-      ],
-      localization: "Sannois, France",
-      date: "2022 - Present",
-    },
+   
     {
       title: "Developpeur Front end chez Reciproq.IT",
       text: "Ma mission consistait à corriger et finir l'application de l'entreprise développer avec Jquery.\n J'ai ensuite du réaliser la migration de l'application vers React. ",
