@@ -6,7 +6,7 @@
   width: 100%;
   margin-top: 30px;
   height: 90vh;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Space mono", sans-serif;
 }
 .experience_title {
   margin: 40px 0 60px 0;
@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center;
   font-size: 60px;
-  font-family: "Unbounded", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .project_svg {
   height: 100px;
@@ -41,10 +41,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 2px solid #252323;
+  border-top: 2px solid white;
   margin-top: 10px;
   padding-top: 30px;
-  font-family: "Unbounded", cursive;
+  font-family: "Montserrat", sans-serif;
 
   position: relative;
 }
@@ -55,12 +55,14 @@
 .job_title_bullet {
   display: flex;
   position: absolute;
+  color: white;
   top: 0;
   left: 0;
 }
 .job_title_date {
   display: flex;
   position: absolute;
+  color: white;
   top: 0;
   right: 0;
 }

@@ -1,30 +1,58 @@
 .project_container {
   overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .project_wrapper {
   width: 100%;
-  height: 100vh;
-
+  height: 90%;
+  margin: auto;
+  padding: 50px;
   display: flex;
+  justify-content: space-between;
+  font-family: "Space Mono", monospace;
+}
+.project_about {
+  position: absolute;
+  top: 20;
+  color: #fad6a5;
 }
 .project_left_container {
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 .project_right_container {
-  width: 50%;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project_right_screen {
+  border: 4px solid #567189;
+  height: 70%;
+  width: 95%;
+  background-size: cover;
+  border-radius: 20px;
 }
 .project_github {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 90%;
 }
 .project_github_icon {
   font-size: 50px;
 }
-.project_title{
-  font-size : 60px;
+.project_title {
+  font-size: 60px;
+  font-family: "Montserrat", sans-serif;
+}
+.project_subtitle {
+  font-family: "Montserrat", sans-serif;
 }
 .project_img {
   width: 800px;
@@ -43,5 +71,5 @@
 }
 .project_tech_icon {
   margin-right: 10px;
-  color: #f5cb5b;
+  color: #fad6a5;
 }
