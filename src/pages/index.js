@@ -408,7 +408,6 @@ export default function Home() {
             }}
             style={{ cursor: "pointer" }}
           >
-            {" "}
             md1.zouaoui@gmail.com
           </div>
           <ul className={styles.footer_list}>
