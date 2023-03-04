@@ -36,7 +36,7 @@ const Slider = () => {
       date: 2023,
       technologies: ["Next JS", "Supabase", "GraphQL"],
       image: "LOGO_TWOOLS.png",
-      video: "/videos/moviesBoard.mp4",
+      video: "/videos/twools.mp4",
       about: "Developpement fullstack",
       link: "https://github.com/Mehdi-Zouaoui/Twools",
     },
