@@ -106,9 +106,7 @@ const Slider = () => {
       technologies: ["Next JS", "MongoDB", "Scss"],
     },
   ]);
-  useLayoutEffect(() => {
-    console.log("rerun");
-  }, [items]);
+  useLayoutEffect(() => {}, [items]);
   const itemsRef = useRef([...Array(items.length)].map(() => createRef()));
   const sendProps = (item) => {
     Router.push({
@@ -158,7 +156,7 @@ const Slider = () => {
       else it.clicked = false;
     });
     setItems(newItems);
-    console.log(items);
+
     if (width >= 800) {
       ctx = gsap.context(() => {
         itemsRef.current.forEach((el, index) => {

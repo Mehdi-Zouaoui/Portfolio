@@ -20,7 +20,7 @@ export const getServerSideProps = async (context) => {
 const ProjectDetails = (props) => {
   const router = useRouter();
   const { query } = props;
-  console.log(query);
+
   let [width, setWidth] = useState(null);
 
   useEffect(() => {
