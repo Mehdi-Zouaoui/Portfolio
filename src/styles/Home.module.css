@@ -279,6 +279,7 @@
   scroll-snap-align: start;
 }
 .contact_section {
+  margin-top: 5em;
   height: 100vh;
   scroll-snap-align: start;
   display: flex;
@@ -451,6 +452,9 @@
   }
   .experience_section {
     height: 135vh;
+  }
+  .presentation_mail_line_container {
+    height: 40px;
   }
   .footer {
     padding: 15px 0;
