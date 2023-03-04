@@ -121,6 +121,8 @@ const ProjectDetails = (props) => {
                 autoPlay
                 loop
                 muted
+                controls
+                playsinline
                 className={styles.project_video}
               ></video>
             ) : (
