@@ -130,14 +130,12 @@
   font-family: "Space mono", sans-serif;
 }
 .presentation_mail_line_container {
-  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 .presentation_mail_line {
-  height: 100%;
   width: 1px !important;
   background-color: #fad6a5;
   width: 100%;
@@ -451,9 +449,9 @@
     font-size: 50px;
   }
   .experience_section {
-    height: 135vh;
+    height: 140vh;
   }
-  .presentation_mail_line_container {
+  .presentation_mail_line {
     height: 40px;
   }
   .footer {
@@ -475,5 +473,11 @@
   }
   .projects_section {
     height: 100vh;
+  }
+  .presentation_mail_line_container {
+    height: 100px;
+  }
+  .presentation_mail_line {
+    height: 100%;
   }
 }
