@@ -7,39 +7,20 @@ import {
   faServer,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NextPageContext } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-const ProjectDetails = () => {
+
+export const getServerSideProps = async (context) => {
+  const { query } = context;
+  return { props: { query } };
+};
+const ProjectDetails = (props) => {
   const router = useRouter();
-  const projectId = router.query.productId;
-  const {
-    query: {
-      title,
-      content,
-      description,
-      client_side_infos,
-      server_side_infos,
-      about,
-      link,
-      video,
-      technologies,
-      image,
-    },
-  } = router;
-  const props = {
-    title,
-    content,
-    description,
-    client_side_infos,
-    server_side_infos,
-    about,
-    link,
-    video,
-    technologies,
-    image,
-  };
+  const { query } = props;
+  console.log(query);
   let [width, setWidth] = useState(null);
 
   useEffect(() => {
@@ -73,15 +54,15 @@ const ProjectDetails = () => {
   return (
     <div className={styles.project_container}>
       <div className={styles.project_wrapper}>
-        <p className={styles.project_about}>{props.about}</p>
+        <p className={styles.project_about}>{query.about}</p>
         <div className={styles.project_left_container}>
           <div className={styles.project_github}>
             <div className={styles.project_github_wrapper}>
-              <h1 className={styles.project_title}>{props.title}</h1>
-              <p className={styles.project_text}>{props.content}</p>
+              <h1 className={styles.project_title}>{query.title}</h1>
+              <p className={styles.project_text}>{query.content}</p>
             </div>
             <div>
-              <a href={props.link} target="_blank" rel="noreferrer">
+              <a href={query.link} target="_blank" rel="noreferrer">
                 {" "}
                 <FontAwesomeIcon
                   icon={faGithub}
@@ -91,7 +72,7 @@ const ProjectDetails = () => {
             </div>
           </div>
           <div className={styles.project_description} style={{ width: "90%" }}>
-            {props.description}
+            {query.description}
           </div>
           <div className={styles.project_client}>
             <h2 className={styles.project_subtitle}>
@@ -102,7 +83,7 @@ const ProjectDetails = () => {
               />{" "}
               Client{" "}
             </h2>
-            <p style={{ width: "90%" }}>{props.client_side_infos}</p>{" "}
+            <p style={{ width: "90%" }}>{query.client_side_infos}</p>{" "}
           </div>
           <div className={styles.project_server}>
             <div>
@@ -114,13 +95,13 @@ const ProjectDetails = () => {
                 />{" "}
                 Serveur
               </h2>
-              <p style={{ width: "90%" }}> {props.server_side_infos}</p>
+              <p style={{ width: "90%" }}> {query.server_side_infos}</p>
             </div>
           </div>
           <div className={styles.project_technologies}>
             <h3 className={styles.project_subtitle}>Technologie</h3>
             <ul className={styles.project_techs} style={{ width: "90%" }}>
-              {props.technologies.map((tech, index) => (
+              {query.technologies.map((tech, index) => (
                 <li key={index}>
                   <FontAwesomeIcon
                     icon={faCaretRight}
@@ -134,9 +115,9 @@ const ProjectDetails = () => {
         </div>
         <div className={styles.project_right_container}>
           <div className={styles.project_right_screen}>
-            {props.video.length > 1 ? (
+            {query.video.length > 1 ? (
               <video
-                src={props.video}
+                src={query.video}
                 autoPlay
                 loop
                 muted
@@ -146,7 +127,7 @@ const ProjectDetails = () => {
               <Image
                 width={width <= 800 ? 300 : 350}
                 height={800}
-                src={props.image}
+                src={query.image}
                 alt=""
               />
             )}
