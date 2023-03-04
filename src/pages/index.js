@@ -114,9 +114,8 @@ export default function Home() {
               </span>
             </p>
             <p className={styles.presentation_profession}>
-              {
-                "Développeur d'application web spécialisé dans React et Next.js."
-              }
+              Développeur d&apos;application web spécialisé dans React et
+              Next.js.
             </p>
           </div>
         </div>
@@ -165,13 +164,14 @@ export default function Home() {
           <div className={styles.details_content}>
             <h2 className={styles.about_title}>Qui suis-je ?</h2>
             <p className={styles.about_text}>
-              {`Passioné par la création d'applications modernes et interactives
-              en utilisant les dernières technologies. Je maitrise JavaScript,
-              React, Next.js et d'autres bibliothèques associées. Je suis
-              également capable de travailler avec des API REST/GRAPHQL et de
-              les intégrer à des applications React. J'aime travailler en équipe
-              et je suis capable de communiquer efficacement pour résoudre les
-              problèmes rapidement et efficacement.`}
+              Passioné par la création d&apos;applications modernes et
+              interactives en utilisant les dernières technologies. Je maitrise
+              JavaScript, React, Next.js et d&apos;autres bibliothèques
+              associées. <br /> Je suis également capable de travailler avec des
+              API REST/GRAPHQL et de les intégrer à des applications React.
+              J&apos;aime travailler en équipe et je suis capable de communiquer
+              efficacement pour résoudre les problèmes rapidement et
+              efficacement.
             </p>
             <div className={styles.technologies_container}>
               <h2 className={styles.technologies_title}>Ce que je maitrise</h2>
