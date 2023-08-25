@@ -1,3 +1,4 @@
+import Alert from "@/components/alert";
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
 import Model3d from "@/components/model3d";
@@ -37,6 +38,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   let [width, setWidth] = useState(null);
+  const [alertText, setAlertText] = useState("");
+  const [alertTrigger, setAlertTrigger] = useState(false);
   const [height, setHeight] = useState(null);
   useEffect(() => {
     setWidth(
@@ -61,8 +64,16 @@ export default function Home() {
       window.removeEventListener("resize", resizeListener);
     };
   }, []);
+  useEffect(() => {
+    let timeout;
+    if (alertTrigger) {
+      timeout = setTimeout(() => setAlertTrigger(false), 2000);
+    }
+    return () => clearTimeout(timeout);
+  }, [alertTrigger]);
   return (
     <div className={styles.portfolio_container}>
+      <Alert text={alertText} triggered={alertTrigger} />
       <section className={styles.main_container}>
         <NavBar width={width} />
         <div className={styles.profil}>
@@ -124,6 +135,8 @@ export default function Home() {
           <p
             onClick={() => {
               navigator.clipboard.writeText("md1.zouaoui@gmail.com");
+              setAlertText((oldText) => "Mail Copied !");
+              setAlertTrigger(!alertTrigger);
             }}
           >
             md1.zouaoui@gmail.com
@@ -388,9 +401,7 @@ export default function Home() {
       </section>
       <section className={styles.projects_section} id="projects">
         <div className={styles.projects_title}>
-          <div className={styles.projects_line} />
           <h2 className={styles.projects_title_content}>Projets </h2>
-          <div className={styles.projects_line} />
         </div>
         <Slider />
       </section>
@@ -405,6 +416,8 @@ export default function Home() {
           <div
             onClick={() => {
               navigator.clipboard.writeText("md1.zouaoui@gmail.com");
+              setAlertText((oldText) => "Mail Copied !");
+              setAlertTrigger(!alertTrigger);
             }}
             style={{ cursor: "pointer" }}
           >

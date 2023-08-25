@@ -27,7 +27,7 @@ const Contact = ({ width }) => {
           />
           <div className={styles.contact_left_content}>
             <h2>Disponible pour toutes opportunités Freelance </h2>
-            <p>Envoyez moi un mail ou contacez moi sur mes reseaux</p>
+            <p>Envoyez moi un mail ou contactez moi sur mes réseaux</p>
             <p>md1.zouaoui@gmail.com</p>
             <ul className={styles.contact_social}>
               <li>

@@ -93,7 +93,7 @@ const Slider = () => {
       title: "Site E-commerce",
       content:
         "Site e-commerce et publicitaire crée pour la société Newmade Audiovisuel",
-      description: `Le site vitrine de Newmade Audiovisuel, la partie e-commerce est développé mais pas encore en ligne faute de budget.`,
+      description: `Le site vitrine de Newmade Audiovisuel, la partie e-commerce est développé mais pas encore en ligne.`,
       client_side_infos:
         "Site entièrement développer avec Next JS et des librairies tierce pour gérer certains composants. Le style est géré avec Scss",
       server_side_infos:
@@ -148,53 +148,53 @@ const Slider = () => {
       window.removeEventListener("resize", resizeListener);
     };
   }, []);
-  const elasticAnimation = (item, i) => {
-    let ctx;
-    const newItems = [...items];
-    newItems.forEach((it, ind) => {
-      if (i === ind) it.clicked = true;
-      else it.clicked = false;
-    });
-    setItems(newItems);
+  // const elasticAnimation = (item, i) => {
+  //   let ctx;
+  //   const newItems = [...items];
+  //   newItems.forEach((it, ind) => {
+  //     if (i === ind) it.clicked = true;
+  //     else it.clicked = false;
+  //   });
+  //   setItems(newItems);
 
-    if (width >= 800) {
-      ctx = gsap.context(() => {
-        itemsRef.current.forEach((el, index) => {
-          gsap.to(el.current, {
-            height: "40vh",
-            width: items[index].clicked ? "10vw" : "8vw",
-            duration: 2,
-            ease: "elastic(1, .3)",
-          });
+  //   if (width >= 800) {
+  //     ctx = gsap.context(() => {
+  //       itemsRef.current.forEach((el, index) => {
+  //         gsap.to(el.current, {
+  //           height: "40vh",
+  //           width: items[index].clicked ? "10vw" : "8vw",
+  //           duration: 2,
+  //           ease: "elastic(1, .3)",
+  //         });
 
-          gsap.to(el.current, {
-            height: "40vh",
-            width: items[index].clicked ? "30vw" : "16vw",
-            duration: 2.5,
-            ease: "elastic(1, .3)",
-          });
-        });
-      }, comp);
-    }
-    if (width < 800) {
-      ctx = gsap.context(() => {
-        itemsRef.current.forEach((el, index) => {
-          gsap.to(el.current, {
-            height: items[index].clicked ? "10vh" : "8vh",
-            duration: 2,
-            ease: "elastic(1, .3)",
-          });
-          gsap.to(el.current, {
-            height: items[index].clicked ? "50vh" : "10vh",
-            duration: 2.5,
-            ease: "elastic(1, .3)",
-          });
-        });
-      }, comp);
-    }
+  //         gsap.to(el.current, {
+  //           height: "40vh",
+  //           width: items[index].clicked ? "30vw" : "16vw",
+  //           duration: 2.5,
+  //           ease: "elastic(1, .3)",
+  //         });
+  //       });
+  //     }, comp);
+  //   }
+  //   if (width < 800) {
+  //     ctx = gsap.context(() => {
+  //       itemsRef.current.forEach((el, index) => {
+  //         gsap.to(el.current, {
+  //           height: items[index].clicked ? "10vh" : "8vh",
+  //           duration: 2,
+  //           ease: "elastic(1, .3)",
+  //         });
+  //         gsap.to(el.current, {
+  //           height: items[index].clicked ? "50vh" : "10vh",
+  //           duration: 2.5,
+  //           ease: "elastic(1, .3)",
+  //         });
+  //       });
+  //     }, comp);
+  //   }
 
-    return () => ctx.revert(); // cleanup
-  };
+  //   return () => ctx.revert(); // cleanup
+  // };
 
   return (
     <div className={styles.container}>
@@ -206,46 +206,41 @@ const Slider = () => {
               : ` ${styles.sliderItem_short}`
           }
           ref={itemsRef.current[index]}
-          onClick={() => elasticAnimation(item, index)}
+          // onClick={() => elasticAnimation(item, index)}
           key={index}
         >
-          <h3 className={styles.item_title}>{item.title}</h3>
-          {item.clicked ? (
-            <div className={styles.item_content_container}>
-              <div className={styles.item_content_details}>
-                <div className={styles.item_calendar}>
-                  <span>Date</span>
-                  <p>{item.date}</p>
-                </div>
-                <p className={styles.item_content}>{item.content}</p>
+          <div className={styles.item_content_container}>
+            <h3 className={styles.item_title}>{item.title}</h3>
+            <div className={styles.item_content_details}>
+              <div className={styles.item_calendar}>
+                <span>Date</span>
+                <p>{item.date}</p>
               </div>
-              <div className={styles.item_technologies_container}>
-                <span>Technologies</span>
-                <div className={styles.item_technologies_wrapper}>
-                  {item.technologies.map((tech, index) => (
-                    <div key={index}>
-                      <FontAwesomeIcon
-                        style={{ marginRight: "10px" }}
-                        icon={faCaretRight}
-                      />
-                      {tech}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div
-                className={styles.item_learn_more}
-                onClick={() => {
-                  sendProps(item);
-                }}
-              >
-                Learn More <FontAwesomeIcon icon={faArrowRight} />
+              <p className={styles.item_content}>{item.content}</p>
+            </div>
+            <div className={styles.item_technologies_container}>
+              <span>Technologies</span>
+              <div className={styles.item_technologies_wrapper}>
+                {item.technologies.map((tech, index) => (
+                  <div key={index}>
+                    <FontAwesomeIcon
+                      style={{ marginRight: "10px" }}
+                      icon={faCaretRight}
+                    />
+                    {tech}
+                  </div>
+                ))}
               </div>
             </div>
-          ) : (
-            ""
-          )}
+            <div
+              className={styles.item_learn_more}
+              onClick={() => {
+                sendProps(item);
+              }}
+            >
+              Learn More <FontAwesomeIcon icon={faArrowRight} />
+            </div>
+          </div>
 
           {/* <img src={item.img} className={styles.sliderItem_img} alt="" /> */}
         </div>

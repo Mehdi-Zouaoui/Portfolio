@@ -3,6 +3,22 @@
 
   height: 100vh;
 }
+.alert_container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  animation: opacityFade 2s forwards;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  height: 50px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: #393939;
+  font-family: "Space mono", sans-serif;
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -21,7 +37,6 @@
   padding-bottom: 50px;
   justify-content: space-around;
   align-items: center;
-  scroll-snap-align: start;
 }
 .mouse_icon {
   display: flex;
@@ -184,7 +199,6 @@
 
   line-height: 25px;
   margin-bottom: 30px;
-  scroll-snap-align: start;
 }
 .about_title {
   margin-bottom: 20px;
@@ -237,7 +251,6 @@
   overflow: visible;
 }
 .projects_section {
-  scroll-snap-align: start;
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -274,12 +287,11 @@
 }
 .experience_section {
   height: 100vh;
-  scroll-snap-align: start;
 }
 .contact_section {
   margin-top: 5em;
   height: 100vh;
-  scroll-snap-align: start;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -463,7 +475,6 @@
 
 @media (min-width: 50em) {
   .portfolio_container {
-    scroll-snap-type: y mandatory;
     overflow-y: scroll;
 
     height: 100vh;
@@ -479,5 +490,16 @@
   }
   .presentation_mail_line {
     height: 100%;
+  }
+}
+@keyframes opacityFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
