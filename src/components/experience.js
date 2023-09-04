@@ -11,71 +11,163 @@ import { createRef, useLayoutEffect, useRef, useState } from "react";
 const Experience = () => {
   const [jobs, setJobs] = useState([
     {
-      title: "Developpeur Full Stack et Gérant Twools ",
-      text: `Twools est mon projet entreprenariale qui a été très formateur.\n\
-      Pour ce projet j'ai du tout faire seul. \n\
-      Développer le client et le serveur de l'application.\n\ Créer un API et une base de données.\n\
-      Manipuler l'API Twitch et la gestion en temps réel des données. \n\
-      Créer un système d'authentification sécurisé et géré la sécurité des données utilisateur.`,
+      multiple: false,
+      title: "DEVELOPPEUR FULLSTACK – TWOOLS ",
+      text: `Plateforme web permettant de créer et gérer des outils visant à améliorer un flux de diffusion en ligne (streaming) et à susciter l’engagement avec l’audience.`,
+      missions: [
+        "Évaluation et sélection des moyens techniques requis pour le développement",
+        "Conception et réalisation du design ainsi que de la maquette de l’application",
+        "Développement de l’interface utilisateur",
+        "Développement de la partie serveur",
+        "Création de la base de données et mise en relation avec l’application",
+        "Gestion de versionning",
+        "Développement du CRUD et de la partie administration",
+        "Développement du système d’authentification",
+        "Création de l’api GraphQL",
+        "Élaboration des algorithmes pour le traitement en temps réel des données",
+        "Développement des outils 3D",
+        "Mise en relation avec les logiciels de capture d’écran",
+        "Mise en relation avec les APIs nécessaire au fonctionnement de l’application",
+        "Débogage",
+        "Testing",
+      ],
       selected: true,
       badges: [
-        "Next js",
-        "Tailwind",
-        "Supabase",
-        "MongoDB",
-        "React Three Fiber",
-        "GraphQL",
-        "Twitch API",
-        "Javascript",
-      ],
-      localization: "Sannois, France",
-      date: "2022 - Present",
-    },
-
-    {
-      title: "Developpeur Full Stack Newmade Audiovisuel ",
-      text: `Unique developpeur pour Newmade Audiovisuel j'étais en charge de la création dans un premier d'un site vitrine pour la socitétée puis de créer la partie e-commerce \n\
-      Une mission excitante qui m’a permis d'améliorer mes compétences dans le développement full stack et de me perfectionner dans l'utilisation du framework Next JS`,
-      selected: false,
-      badges: [
-        "Next js",
-        "Tailwind",
-        "Supabase",
-        "MongoDB",
-        "React Three Fiber",
-        "GraphQL",
-        "Twitch API",
-        "Javascript",
-      ],
-      localization: "Sannois, France",
-      date: "2022 - Present",
-    },
-
-    {
-      title: "Developpeur Front end chez Reciproq.IT",
-      text: "Ma mission consistait à corriger et finir l'application de l'entreprise développer avec Jquery.\n J'ai ensuite du réaliser la migration de l'application vers React. ",
-      selected: false,
-      badges: ["React", "Jquery", "SCSS", "REST API", "Javascript"],
-      localization: "La Défense , France",
-      date: "2021 - 2022",
-    },
-    {
-      title: "Developpeur Front end Junior chez Cliclic",
-      text: " Mes principaux projets étaient le développement de jeux interactifs pour des pages Facebooks et le développement d'outils pour des régis TV.\n En parallèle j'ai été amener à développer une application CRUD pour gérer la documentation de l'entreprise. \n J'ai fait mes premiers pats dans le monde professionnel du développement grace à Cliclic ou j'ai appris énormément et eu l'occasion de pratiquer sur beaucoup de technologies différentes.",
-      selected: false,
-      badges: [
-        "React",
-        "Angular JS",
-        "Angular",
+        "JAVASCRIPT",
+        "REACT",
+        "NEXTJS",
+        "SUPABASE",
+        "THREEJS",
+        "TAILWIND",
+        "MONGODB",
+        "TYPESCRIPT",
+        "HTML",
         "SCSS",
-        "Bootstrap",
-        "REST API",
+        "JSX",
+        "NODEJS",
+        "NPM",
+        "GIT",
+        "GITHUB",
+      ],
+      localization: "Sannois, France",
+      date: "Mars 2022 – Aout 2023",
+    },
+
+    {
+      multiple: false,
+      title: "DEVELOPPEUR FULLSTACK – NEWMADE-AUDIOVISUEL ",
+      text: `Création et mise en place du site e-commerce de l’entreprise.`,
+      missions: [
+        "Développement de l’interface utilisateur",
+        "Suivis et échange avec l’équipe design",
+        "Conception du système d’authentification",
+        "Création du système de paiement",
+        "Développement du CRUD et de la partie administration",
+        "Développement du serveur du site",
+        "Création de la base de données",
+      ],
+      selected: false,
+      badges: [
+        "Next js",
+        "Tailwind",
+        "Supabase",
+        "MongoDB",
+        "React Three Fiber",
+        "GraphQL",
+        "Twitch API",
         "Javascript",
-        "Express",
-        "Firebase",
+      ],
+      localization: "Sannois, France",
+      date: "Mars 2022 – Septembre 2022",
+    },
+
+    {
+      multiple: false,
+      title: "DEVELOPPEUR FRONT END – RECIPROC-IT",
+      text: "Développement d’une application complète permettant aux utilisateurs de simuler la gestion des risques cyber et d’obtenir un rapport détaillé et complet.",
+      missions: [
+        "Développement et intégration d’un système d’authentification",
+        "Correction, Refactorisation et Optimisation du code déjà existant",
+        "Développement de l’algorithme de la simulation",
+        "Développement d’un module schématisant toute les données sorties après la simulation",
+        "Développement de l’interface utilisateur",
+        "Portage de l’application JQUERY vers React",
+        "Gestion de la partie Front du projet",
+        "Livraison et suivi de mise en production",
+        "Participation à l'amélioration continue des processus et des outils",
+        "Création et mise à jour de la documentation technique",
+      ],
+      selected: false,
+      badges: [
+        "JAVASCRIPT",
+        "JQUERY",
+        "REACT",
+        "DOCKER",
+        "GIT",
+        "HTML",
+        "CSS",
+        "PYTHON",
+        "NODEJS",
+        "NPM",
+        "GIT",
+        "API REST",
+        "ORACLE",
+        "GITHUB",
+      ],
+      localization: "La Défense , France",
+      date: "Novembre 2020 – Avril 2021",
+    },
+    {
+      multiple: true,
+      title: "DEVELOPPEUR FRONT END – CLICLIC",
+      text: {
+        project_1:
+          "Application de gestion de la documentation interne de l’entreprise et des données.",
+        project_2:
+          "Création de solutions graphiques et interactives pour des productions télévisuelles et web.",
+      },
+      missions: {
+        missions_1: [
+          "Développement du serveur de l’application",
+          "Développement de l’interface utilisateur",
+          "Création et gestion du système d’authentification sécurisé",
+          "Création de base de données et connexion à l’application",
+          "Développement du CRUD",
+          "Gestion de l’affichage et des animations",
+          "Conception de l’API REST",
+          "Préparation mise en production",
+          "Création et mise à jour de la documentation technique",
+        ],
+        misions_2: [
+          "Récupération du flux en direct du client",
+          "Développement de l’algorithme de jeu",
+          "Création de l’interface graphique",
+          "Création des animations",
+          "Suivis de mise en production",
+        ],
+      },
+      selected: false,
+      badges: [
+        "JAVASCRIPT",
+        "ANGULAR",
+        "ANGULARJS",
+        "NODEJS",
+        "REACT",
+        "HTML",
+        "CSS",
+        "SCSS",
+        "GIT",
+        "GITHUB",
+        "GITLAB",
+        "GSAP",
+        "FIREBASE",
+        "MONGODB",
+        "BOOTSRAP",
+        "EXPRESS",
+        "TYPESCRIPT",
       ],
       localization: "Paris 12e , France",
-      date: "2019 - 2021",
+      date: "Aout 2019 – Octobre 2020",
     },
   ]);
 
@@ -125,8 +217,32 @@ const Experience = () => {
                 <FontAwesomeIcon icon={faLocationDot} />
                 <span style={{ marginLeft: "5px" }}>{job.localization}</span>
               </div>
+              {job.multiple == false ? (
+                <div>
+                  <span>Project</span>
+                  <p className={styles.job_text}>{job.text}</p>
+                  <ul className={styles.job_missions_list}>
+                    {job.missions.map((mission, missionIndex) => (
+                      <li key={missionIndex} className={styles.job_mission}>
+                        {mission}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <div>
+                  <span>Project</span>
+                  <p className={styles.job_text}>{job.text}</p>
+                  <ul className={styles.job_missions_list}>
+                    {job.missions.map((mission, missionIndex) => (
+                      <li key={missionIndex} className={styles.job_mission}>
+                        {mission}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
-              <p className={styles.job_text}>{job.text}</p>
               <ul className={styles.job_badges_list}>
                 {job.badges.map((badge, badgeIndex) => (
                   <li key={badgeIndex} className={styles.job_badge}>
