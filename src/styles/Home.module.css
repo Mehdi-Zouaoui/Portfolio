@@ -302,7 +302,7 @@
     rgba(250, 214, 165, 1) 0%,
     rgba(86, 113, 137, 1) 100%
   );
-  color: #393939;
+  color: #2a2626;
   padding: 15px 100px;
   font-size: 20px;
   display: flex;
@@ -418,14 +418,14 @@
     font-size: 20px;
   }
   .presentation_mail > p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .details_content {
     width: 80%;
-    font-size: 12px;
+    font-size: 16px;
   }
   .about_text {
-    font-size: 14px;
+    font-size: 17px;
   }
   .about_container {
     margin-top: 3rem;

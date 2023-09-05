@@ -24,17 +24,16 @@ const Slider = () => {
     {
       title: "Twools",
       content:
-        "Application web permettant aux vidéastes/streamers de créer des overlays interactifs et dynamics via des widgets/twools",
-      description: `Twools est une application permettant aux streamers du créer
-      affichage animé et/ou interactif avec leurs communautés vià des "twools".
-      Il existe une liste non exhaustive de twools comme des mini-jeux, des sondages, des éléments 3ds ou encore des roues de la chance.`,
+        "Plateforme web permettant de créer et gérer des outils visant à améliorer un flux de diffusion en ligne (streaming) et à susciter l’engagement avec l’audience.",
+      description: `
+      Twools est une application qui offre aux streamers la possibilité de créer des affichages animés et interactifs en collaboration avec leur communauté via divers "twools". Cette application propose une variété de fonctionnalités telles que des mini-jeux, des sondages, des éléments 3D, ainsi que des roues de la chance, parmi d'autres options.`,
       client_side_infos:
-        "Côté client l'application est développée avec Next js et le style avec Tailwind. Pour les composants 3ds j'ai utilisé à react Three Fibre",
+        "En ce qui concerne la partie client, l'application est construite en utilisant Next.js pour le développement, Tailwind pour la conception de l'interface, et React Three Fiber pour les composants 3D.",
       server_side_infos:
-        "Le serveur est géré avec Next JS et, pour la base de données, je suis parti dans un premier temps sur MongoDB puis ai effectué une migration vers Supabase pour gérer la manipulation de données en temps réel. Enfin je suis partie sur une API REST au départ pour migrer vers GraphQL pour, encore une fois, gérer les données en temps réel. ",
+        "Le serveur est administré grâce à Next.js, et en ce qui concerne la base de données, j'ai initialement choisi MongoDB, mais j'ai ensuite migré vers Supabase pour la gestion des données en temps réel. Enfin, j'ai commencé avec une API REST avant de migrer vers GraphQL pour une gestion encore plus efficace des données en temps réel.",
       clicked: false,
       date: 2023,
-      technologies: ["Next JS", "Supabase", "GraphQL"],
+      technologies: ["Next JS", "Supabase", "GraphQL", "Tailwind"],
       image: "LOGO_TWOOLS.png",
       video: "/videos/twools.mp4",
       about: "Developpement fullstack",
@@ -44,12 +43,12 @@ const Slider = () => {
     {
       title: "Bibliothèques Cinéma",
       content:
-        "Une page web permettant d'enregistrer tous les films favoris d'un utilisateur ou de créer sa propre watchlist",
+        "Une plateforme en ligne qui permet aux utilisateurs d'enregistrer leurs films favoris ou de constituer leur propre liste de films à regarder.",
       description:
-        "MoviesBoard est une bibliothèque personnelle pour enregistrer vos fils favoris avec la possibilité d'avoir les détails du casting et les films similaires à celui-ci choisis pour toujours avoir un film à se mettre sous la dent !",
+        "MoviesBoard est une bibliothèque personnelle conçue pour que vous puissiez sauvegarder vos films favoris. Elle offre également la possibilité d'accéder aux détails sur le casting ainsi qu'à une sélection de films similaires, garantissant ainsi que vous aurez toujours un film à découvrir ou à regarder !",
       client_side_infos:
-        "Projet développé avec React. On utilise l'api The Movie DB pour récupérer les informations des films. Le style du client est géré avec bootstrap et certaines librairies react notamment pour le slider",
-      server_side_infos: "Serveur local JSON",
+        "Le projet est réalisé en utilisant React, avec l'API The Movie DB pour obtenir les informations sur les films. Le design côté client est pris en charge grâce à Bootstrap, et j'ai du intégré certaines bibliothèques React, notamment pour la création d'un slider.",
+      server_side_infos: "Le serveur est un serveur local JSON",
       clicked: false,
       about: "Developpement frontend ",
       link: "https://github.com/Mehdi-Zouaoui/MoviesBoard",
@@ -60,9 +59,9 @@ const Slider = () => {
     {
       title: "DeezWeb",
       content:
-        "Manipulation de l'API de Deezer pour créer un site web qui peut rechercher et sauvegarder les musiques favoris d'un utilisateur",
+        "Utilisation de l'API de Deezer pour concevoir un site web capable de permettre aux utilisateurs de rechercher et de mémoriser leurs chansons préférées.",
       about: "Developpement fullstack",
-      description: `DeezWeb est une bibliothèque musicale gérée grace à l'API de Deezer. Il est possible d'ajouter ses musiques préférées, de les supprimer et de créer des playlists.`,
+      description: `DeezWeb constitue une médiathèque musicale alimentée par l'API de Deezer, offrant la possibilité d'inclure ses chansons favorites, de les retirer, et de créer des listes de lecture.`,
       client_side_infos:
         "Projet développé avec Javascript sans framework. On utilise l'api de Deezer pour récupérer les données des musiques. Le style du client est géré avec bootstrap et CSS",
       server_side_infos:
@@ -76,7 +75,7 @@ const Slider = () => {
     {
       title: "Site promotionel",
       content:
-        "Un site web publicitaire pour la sortie du nouvel album d'un artiste en l'occurrence Roméo Elvis",
+        "Un site web promotionnel dédié à la sortie du dernier album d'un artiste.",
       description: `Projet de site publicitaire pour l'album Chocolat de Roméo Elvis inspiré de sa charte graphique rassemblant toutes les informations importantes autour de sa musique`,
       client_side_infos:
         "L'intégralité du projet est développée avec JS HTML et CSS sans framework le challenge étant plustot accès sur le design.",
@@ -92,7 +91,7 @@ const Slider = () => {
     {
       title: "Site E-commerce",
       content:
-        "Site e-commerce et publicitaire crée pour la société Newmade Audiovisuel",
+        "Plateforme publicitaire et de vente en ligne développée pour une entreprise",
       description: `Le site vitrine de Newmade Audiovisuel, la partie e-commerce est développé mais pas encore en ligne.`,
       client_side_infos:
         "Site entièrement développer avec Next JS et des librairies tierce pour gérer certains composants. Le style est géré avec Scss",

@@ -25,9 +25,14 @@ const Contact = ({ width }) => {
             alt="avatar"
             src="/icon_perso_blanc.png"
           />
+
           <div className={styles.contact_left_content}>
-            <h2>Disponible pour toutes opportunités Freelance </h2>
-            <p>Envoyez moi un mail ou contactez moi sur mes réseaux</p>
+            <h2>Je suis ouvert à toutes les opportunités. </h2>
+            <p>
+              {" "}
+              N'hésitez pas à m'envoyer un e-mail ou à me contacter via mes
+              réseaux sociaux.
+            </p>
             <p>md1.zouaoui@gmail.com</p>
             <ul className={styles.contact_social}>
               <li>

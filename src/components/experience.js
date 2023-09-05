@@ -120,32 +120,60 @@ const Experience = () => {
     {
       multiple: true,
       title: "DEVELOPPEUR FRONT END – CLICLIC",
-      text: {
-        project_1:
-          "Application de gestion de la documentation interne de l’entreprise et des données.",
-        project_2:
-          "Création de solutions graphiques et interactives pour des productions télévisuelles et web.",
-      },
-      missions: {
-        missions_1: [
-          "Développement du serveur de l’application",
-          "Développement de l’interface utilisateur",
-          "Création et gestion du système d’authentification sécurisé",
-          "Création de base de données et connexion à l’application",
-          "Développement du CRUD",
-          "Gestion de l’affichage et des animations",
-          "Conception de l’API REST",
-          "Préparation mise en production",
-          "Création et mise à jour de la documentation technique",
-        ],
-        misions_2: [
-          "Récupération du flux en direct du client",
-          "Développement de l’algorithme de jeu",
-          "Création de l’interface graphique",
-          "Création des animations",
-          "Suivis de mise en production",
-        ],
-      },
+      text: [
+        {
+          project:
+            "Application de gestion de la documentation interne de l’entreprise et des données.",
+          missions: [
+            "Développement du serveur de l’application",
+            "Développement de l’interface utilisateur",
+            "Création et gestion du système d’authentification sécurisé",
+            "Création de base de données et connexion à l’application",
+            "Développement du CRUD",
+            "Gestion de l’affichage et des animations",
+            "Conception de l’API REST",
+            "Préparation mise en production",
+            "Création et mise à jour de la documentation technique",
+          ],
+        },
+        {
+          project:
+            "Création de solutions graphiques et interactives pour des productions télévisuelles et web.",
+          missions: [
+            "Récupération du flux en direct du client",
+            "Développement de l’algorithme de jeu",
+            "Création de l’interface graphique",
+            "Création des animations",
+            "Suivis de mise en production",
+          ],
+        },
+      ],
+      // text: {
+      //   project_1:
+      //     "Application de gestion de la documentation interne de l’entreprise et des données.",
+      //   project_2:
+      //     "Création de solutions graphiques et interactives pour des productions télévisuelles et web.",
+      // },
+      // missions: {
+      //   missions_1: [
+      //     "Développement du serveur de l’application",
+      //     "Développement de l’interface utilisateur",
+      //     "Création et gestion du système d’authentification sécurisé",
+      //     "Création de base de données et connexion à l’application",
+      //     "Développement du CRUD",
+      //     "Gestion de l’affichage et des animations",
+      //     "Conception de l’API REST",
+      //     "Préparation mise en production",
+      //     "Création et mise à jour de la documentation technique",
+      //   ],
+      //   misions_2: [
+      //     "Récupération du flux en direct du client",
+      //     "Développement de l’algorithme de jeu",
+      //     "Création de l’interface graphique",
+      //     "Création des animations",
+      //     "Suivis de mise en production",
+      //   ],
+      // },
       selected: false,
       badges: [
         "JAVASCRIPT",
@@ -218,9 +246,10 @@ const Experience = () => {
                 <span style={{ marginLeft: "5px" }}>{job.localization}</span>
               </div>
               {job.multiple == false ? (
-                <div>
-                  <span>Project</span>
+                <div className={styles.job_details_container}>
+                  <h4>Project</h4>
                   <p className={styles.job_text}>{job.text}</p>
+                  <h4>Missions</h4>
                   <ul className={styles.job_missions_list}>
                     {job.missions.map((mission, missionIndex) => (
                       <li key={missionIndex} className={styles.job_mission}>
@@ -230,16 +259,21 @@ const Experience = () => {
                   </ul>
                 </div>
               ) : (
-                <div>
-                  <span>Project</span>
-                  <p className={styles.job_text}>{job.text}</p>
-                  <ul className={styles.job_missions_list}>
-                    {job.missions.map((mission, missionIndex) => (
-                      <li key={missionIndex} className={styles.job_mission}>
-                        {mission}
-                      </li>
-                    ))}
-                  </ul>
+                <div className={styles.job_details_container}>
+                  {job.text.map((item, itemIndex) => (
+                    <div key={itemIndex}>
+                      <h4>Project {itemIndex + 1}</h4>
+                      <p className={styles.job_text}>{item.project}</p>
+                      <h4>Missions</h4>
+                      <ul className={styles.job_missions_list}>
+                        {item.missions.map((mission, missionIndex) => (
+                          <li key={missionIndex} className={styles.job_mission}>
+                            {mission}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               )}
 

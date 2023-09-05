@@ -321,16 +321,6 @@ export default function Home() {
                       Three JS
                     </p>
                   </li>
-                  <li className={styles.technologies_wrapper}>
-                    <Image
-                      className={styles.technologies_icon}
-                      src="/icons/blender.svg"
-                      alt="blender logo"
-                      width={76}
-                      height={55}
-                    />
-                    <p className={styles.technologies_wrapper_label}>Blender</p>
-                  </li>
                 </ul>
               </InfiniteLooper>
             </div>
@@ -401,7 +391,7 @@ export default function Home() {
       </section>
       <section className={styles.projects_section} id="projects">
         <div className={styles.projects_title}>
-          <h2 className={styles.projects_title_content}>Projets </h2>
+          <h2 className={styles.projects_title_content}>Projets personnels </h2>
         </div>
         <Slider />
       </section>
