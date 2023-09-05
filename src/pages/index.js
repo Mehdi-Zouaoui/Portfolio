@@ -1,7 +1,6 @@
 import Alert from "@/components/alert";
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
-import Model3d from "@/components/model3d";
 import NavBar from "@/components/navBar";
 import styles from "@/styles/Home.module.css";
 import {
