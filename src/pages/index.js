@@ -156,7 +156,7 @@ export default function Home() {
               </a>
             </li>
             <li className={styles.presentation_socials_list_item}>
-              <a href="https://github.com/Mehdi-Zouaoui?tab=repositories">
+              <a href="https://github.com/Mehdi-Zouaoui">
                 <FontAwesomeIcon
                   className={styles.contact_social_item}
                   icon={faGithub}
@@ -425,7 +425,7 @@ export default function Home() {
             </li>
             <li>
               <a
-                href="https://github.com/Mehdi-Zouaoui?tab=repositories"
+                href="https://github.com/Mehdi-Zouaoui"
                 target="_blank"
                 rel="noreferrer"
               >

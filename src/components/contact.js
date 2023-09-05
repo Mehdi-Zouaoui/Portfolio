@@ -49,7 +49,7 @@ const Contact = ({ width }) => {
               </li>
               <li>
                 <a
-                  href="https://github.com/Mehdi-Zouaoui?tab=repositories"
+                  href="https://github.com/Mehdi-Zouaoui"
                   target="_blank"
                   rel="noreferrer"
                 >
